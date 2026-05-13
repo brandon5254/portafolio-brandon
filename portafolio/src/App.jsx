@@ -278,7 +278,7 @@ const galleryItems = [
     title: "MindMate",
     subtitle: "Capturas del módulo clínico, seguimiento de síntomas y experiencia médico-paciente.",
     tag: "HealthTech",
-    imageUrl: "public/images/projects/mindmate module.jpeg",
+    imageUrl: "/images/projects/mindmate module.jpeg",
   },
   {
     title: "App móvil de carpooling",
@@ -290,25 +290,25 @@ const galleryItems = [
     title: "Cali Conecta IA",
     subtitle: "Panel de anomalías, consultas inteligentes y recomendaciones operativas.",
     tag: "AI Ops",
-    imageUrl: "/public/images/projects/cali conecta.jpeg",
+    imageUrl: "/images/projects/cali conecta.jpeg",
   },
   {
     title: "FacturaOps",
     subtitle: "Flujos de OCR, validación, trazabilidad y automatización documental.",
     tag: "Automation",
-    imageUrl: "/public/images/projects/facturaops.jpeg",
+    imageUrl: "/images/projects/facturaops.jpeg",
   },
   {
     title: "Sistema de gestión para aerolínea",
     subtitle: "Frontend administrativo y API REST empresarial para centralizar vuelos, reservas, usuarios y operaciones internas.",
     tag: "Angular / Spring Boot",
-    imageUrl: "/public/images/projects/aerolinea panel.png",
+    imageUrl: "/images/projects/aerolinea panel.png",
   },
   {
     title: "Control de asistencia biométrica",
     subtitle: "Sistema de escritorio para registro biométrico, gestión administrativa y reportes operativos.",
     tag: "Desktop / Reporting",
-    imageUrl: "/public/images/projects/asistencia digital.png",
+    imageUrl: "/images/projects/asistencia digital.png",
   },
 ];
 
