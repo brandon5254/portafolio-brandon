@@ -263,7 +263,7 @@ const research = {
   place: "Neiva, Colombia",
   description:
     "Participación como ponente con el proyecto de tesis MindMate, una aplicación orientada al monitoreo de síntomas y apoyo clínico en esquizofrenia. Esta experiencia conecta desarrollo de software, salud digital, inteligencia artificial y comunicación científica en un escenario académico internacional.",
-  imageUrl: "/public/images/research/certificado_AmITIC_2025__ (1).jpg",
+  imageUrl: "/images/research/certificado_AmITIC_2025__ (1).jpg",
 };
 
 const aiFocus = [
