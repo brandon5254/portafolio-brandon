@@ -284,7 +284,7 @@ const galleryItems = [
     title: "App móvil de carpooling",
     subtitle: "Producto móvil tipo BlaBlaCar desarrollado con Ionic y TypeScript para conectar usuarios, compartir viajes y optimizar costos.",
     tag: "Ionic / MongoDB",
-    imageUrl: "portafolio/public/images/projects/intermuniconect.png",
+    imageUrl: "public\\images\\projects\\intermuniconect.png",
   },
   {
     title: "Cali Conecta IA",
