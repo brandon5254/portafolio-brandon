@@ -6,34 +6,50 @@ const profile = {
   phone: "304 587 4931",
   email: "brandont882@gmail.com",
   location: "Colombia",
-  linkedin: "https://www.linkedin.com/in/TU-USUARIO",
+  linkedin: "https://www.linkedin.com/in/brandon-s%C3%A1nchez-944bb6235/",
+  github: "https://github.com/brandon5254",
   photoUrl: "/images/profile/imagen brandon.jpeg",
+};
+
+const galleryImageRoutes = {
+  mindmate: "/images/projects/mindmate module.jpeg",
+  intermuniconnect: "/images/projects/intermuniconect.png",
+  caliConecta: "/images/projects/cali conecta.jpeg",
+  facturaops: "/images/projects/facturaops.jpeg",
+  aerolinea: "/images/projects/aerolinea panel.png",
+  asistencia: "/images/projects/asistencia digital.png",
+  amitic: "/images/research/certificado_AmITIC_2025__ (1).jpg",
 };
 
 const content = {
   es: {
     ui: {
       languageButton: "English",
-      menuLabel: "Abrir o cerrar menú",
       contact: "Contactar",
       sendEmail: "Enviar correo",
       call: "Llamar",
-      linkedin: "LinkedIn",
       viewLinkedin: "Ver LinkedIn",
+      viewGithub: "Ver GitHub",
       viewProjects: "Ver proyectos destacados",
       portfolioBadge: "Portafolio profesional · Backend · IA · Automatización",
       graduated: "Profesional graduado",
       focusBadge: "IA + Arquitectura + Automatización",
-      profilePhotoTitle: "Tu foto profesional aquí",
-      profilePhotoText: "Agrega tu imagen en photoUrl para que el hero quede listo para reclutadores.",
+      menuLabel: "Abrir o cerrar menú",
       professionalInfo: "Información profesional",
       name: "Nombre",
       email: "Correo",
       phone: "Teléfono",
-      viewProfessionalProfile: "Ver perfil profesional",
-      githubPending: "GitHub pendiente",
+      linkedin: "LinkedIn",
+      github: "GitHub",
       demoPending: "Demo pendiente",
+      clickToExpand: "Clic para ampliar imagen",
     },
+    heroCards: [
+      ["briefcase", "Perfil profesional", "Ingeniería + producto"],
+      ["brain", "IA aplicada", "Modelos y automatización"],
+      ["server", "Backend sólido", "APIs, datos y despliegue"],
+      ["linkedin", "Marca profesional", "Listo para reclutadores"],
+    ],
     profile: {
       role: "Ingeniero de Sistemas",
       headline:
@@ -50,44 +66,46 @@ const content = {
       { label: "Galería", href: "#galeria" },
       { label: "Contacto", href: "#contacto" },
     ],
-    impactTitle: "Resultados medibles y una propuesta de valor clara.",
-    impactSubtitle:
-      "Mi perfil combina desarrollo de software, inteligencia artificial, automatización y soporte técnico, con enfoque en construir soluciones funcionales, mantenibles y alineadas a necesidades reales del negocio.",
-    impactLabel: "Resumen de impacto",
-    impactStats: [
-      {
-        value: "+30 pts",
-        label: "Mejora en precisión",
-        detail: "Clasificación de solicitudes con IA durante práctica profesional en DIAN.",
-      },
-      {
-        value: "-60%",
-        label: "Reducción de tiempo",
-        detail: "Optimización del proceso de clasificación mediante automatización.",
-      },
-      {
-        value: "-40%",
-        label: "Menos reprocesos",
-        detail: "Mayor eficiencia operativa, trazabilidad y consistencia en el flujo.",
-      },
-    ],
-    valueCards: [
-      {
-        icon: "server",
-        title: "Backend y arquitectura",
-        text: "Construcción de APIs, integración de servicios, diseño modular y desarrollo orientado a mantenibilidad.",
-      },
-      {
-        icon: "brain",
-        title: "IA y automatización",
-        text: "Aplicación de modelos, agentes inteligentes, automatización institucional y optimización de procesos.",
-      },
-      {
-        icon: "briefcase",
-        title: "Soporte técnico y operación",
-        text: "Experiencia en soporte informático, diagnóstico de fallas, configuración de sistemas y acompañamiento tecnológico.",
-      },
-    ],
+    impact: {
+      label: "Resumen de impacto",
+      title: "Resultados medibles y una propuesta de valor clara.",
+      subtitle:
+        "Mi perfil combina desarrollo de software, inteligencia artificial, automatización y soporte técnico, con enfoque en construir soluciones funcionales, mantenibles y alineadas a necesidades reales del negocio.",
+      stats: [
+        {
+          value: "+30 pts",
+          label: "Mejora en precisión",
+          detail: "Clasificación de solicitudes con IA durante práctica profesional en DIAN.",
+        },
+        {
+          value: "-60%",
+          label: "Reducción de tiempo",
+          detail: "Optimización del proceso de clasificación mediante automatización.",
+        },
+        {
+          value: "-40%",
+          label: "Menos reprocesos",
+          detail: "Mayor eficiencia operativa, trazabilidad y consistencia en el flujo.",
+        },
+      ],
+      valueCards: [
+        {
+          icon: "server",
+          title: "Backend y arquitectura",
+          text: "Construcción de APIs, integración de servicios, diseño modular y desarrollo orientado a mantenibilidad.",
+        },
+        {
+          icon: "brain",
+          title: "IA y automatización",
+          text: "Aplicación de modelos, agentes inteligentes, automatización institucional y optimización de procesos.",
+        },
+        {
+          icon: "briefcase",
+          title: "Soporte técnico y operación",
+          text: "Experiencia en soporte informático, diagnóstico de fallas, configuración de sistemas y acompañamiento tecnológico.",
+        },
+      ],
+    },
     profileSection: {
       label: "Perfil profesional",
       title: "Un perfil técnico con criterio, impacto y visión de crecimiento.",
@@ -102,216 +120,197 @@ const content = {
       title: "Un stack completo para construir, automatizar, analizar y desplegar.",
       subtitle:
         "Organizado por categorías para que reclutadores y líderes técnicos identifiquen rápidamente tus capacidades reales.",
+      groups: [
+        {
+          title: "Lenguajes de programación",
+          icon: "code",
+          skills: ["Python", "C++", "Java", "JavaScript", "TypeScript", "C#", "Go"],
+        },
+        {
+          title: "Backend & APIs",
+          icon: "server",
+          skills: ["Node.js", "FastAPI", "Spring Boot", ".NET Core", "Flask", "Django", "REST APIs"],
+        },
+        {
+          title: "Frontend & Mobile",
+          icon: "layers",
+          skills: ["Angular", "React", "Ionic", "Bootstrap", "HTML", "CSS", "Responsive UI"],
+        },
+        {
+          title: "Bases de datos",
+          icon: "database",
+          skills: ["Oracle SQL", "PostgreSQL", "MySQL", "SQL Server", "MongoDB", "Redis", "Firebase", "SQLite"],
+        },
+        {
+          title: "Cloud, DevOps & despliegue",
+          icon: "rocket",
+          skills: ["Firebase", "Supabase", "Docker", "Vercel", "Railway", "Jenkins", "Apache Tomcat"],
+        },
+        {
+          title: "IA, datos & automatización",
+          icon: "brain",
+          skills: ["Scikit-learn", "Anaconda", "Machine Learning", "LLM", "Prompt Engineering", "Power Apps", "Power Automate"],
+        },
+        {
+          title: "Herramientas profesionales",
+          icon: "terminal",
+          skills: ["Git", "GitHub", "Postman", "Visual Studio", "VS Code", "Rider", "PyCharm"],
+        },
+        {
+          title: "Arquitecturas de software",
+          icon: "shield",
+          skills: ["Clean Code", "Monolítica", "Microservicios", "Arquitectura Limpia", "Modular", "Hexagonal"],
+        },
+      ],
     },
-    skillGroups: [
-      {
-        title: "Lenguajes de programación",
-        icon: "code",
-        skills: ["Python", "C++", "Java", "JavaScript", "TypeScript", "C#", "Go"],
-      },
-      {
-        title: "Backend & APIs",
-        icon: "server",
-        skills: ["Node.js", "FastAPI", "Spring Boot", ".NET Core", "Flask", "Django", "REST APIs"],
-      },
-      {
-        title: "Frontend & Mobile",
-        icon: "layers",
-        skills: ["Angular", "React", "Ionic", "Bootstrap", "HTML", "CSS", "Responsive UI"],
-      },
-      {
-        title: "Bases de datos",
-        icon: "database",
-        skills: ["Oracle SQL", "PostgreSQL", "MySQL", "SQL Server", "MongoDB", "Redis", "Firebase", "SQLite"],
-      },
-      {
-        title: "Cloud, DevOps & despliegue",
-        icon: "rocket",
-        skills: ["Firebase", "Supabase", "Docker", "Vercel", "Railway", "Jenkins", "Apache Tomcat"],
-      },
-      {
-        title: "IA, datos & automatización",
-        icon: "brain",
-        skills: ["Scikit-learn", "Anaconda", "Machine Learning", "LLM", "Prompt Engineering", "Power Apps", "Power Automate"],
-      },
-      {
-        title: "Herramientas profesionales",
-        icon: "terminal",
-        skills: ["Git", "GitHub", "Postman", "Visual Studio", "VS Code", "Rider", "PyCharm"],
-      },
-      {
-        title: "Arquitecturas de software",
-        icon: "shield",
-        skills: ["Clean Code", "Monolítica", "Microservicios", "Arquitectura Limpia", "Modular", "Hexagonal"],
-      },
-    ],
     experienceSection: {
       label: "Experiencia profesional",
       title: "Experiencia construida entre tecnología, operación y mejora de procesos.",
       subtitle:
         "Un recorrido que combina automatización institucional, desarrollo de soluciones y soporte técnico aplicado en entornos reales.",
+      items: [
+        {
+          company: "DIAN – Dirección de Impuestos y Aduanas Nacionales",
+          role: "Practicante de Ingeniería de Sistemas",
+          period: "Práctica profesional",
+          accent: "IA institucional",
+          icon: "brain",
+          summary:
+            "Durante mi práctica profesional participé en el desarrollo e implementación de soluciones sobre Power Platform, integrando automatización e inteligencia artificial para optimizar procesos institucionales. Trabajé en análisis de requerimientos, diseño de soluciones tecnológicas y mejora de la trazabilidad operativa, logrando incrementos en precisión, reducción de tiempos y disminución de reprocesos.",
+          achievements: ["+30 puntos porcentuales en precisión", "-60% en tiempo de clasificación", "-40% en reprocesos operativos"],
+        },
+        {
+          company: "Confecciones Nemetex SAS",
+          role: "Técnico en soporte técnico e informático, ventas y marketing digital",
+          period: "Junio 2021 – Octubre 2023",
+          accent: "Soporte y operación",
+          icon: "briefcase",
+          summary:
+            "Me desempeñé brindando soporte técnico e informático, realizando instalación, configuración y mantenimiento de equipos, sistemas operativos, programas y aplicaciones. Apoyé el diagnóstico y solución de fallas de hardware y software, configuración de perfiles, correos y accesos, revisiones básicas de seguridad, pruebas de nuevas herramientas tecnológicas y acompañamiento a usuarios. Además, participé en actividades relacionadas con ventas y marketing digital, aportando soporte operativo y tecnológico al negocio.",
+          achievements: ["Soporte técnico integral", "Mantenimiento de equipos y sistemas", "Configuración de accesos y correos", "Apoyo en ventas y marketing digital"],
+        },
+      ],
     },
-    experiences: [
-      {
-        company: "DIAN – Dirección de Impuestos y Aduanas Nacionales",
-        role: "Practicante de Ingeniería de Sistemas",
-        period: "Práctica profesional",
-        accent: "IA institucional",
-        icon: "brain",
-        summary:
-          "Durante mi práctica profesional participé en el desarrollo e implementación de soluciones sobre Power Platform, integrando automatización e inteligencia artificial para optimizar procesos institucionales. Trabajé en análisis de requerimientos, diseño de soluciones tecnológicas y mejora de la trazabilidad operativa, logrando incrementos en precisión, reducción de tiempos y disminución de reprocesos.",
-        achievements: [
-          "+30 puntos porcentuales en precisión",
-          "-60% en tiempo de clasificación",
-          "-40% en reprocesos operativos",
-        ],
-      },
-      {
-        company: "Confecciones Nemetex SAS",
-        role: "Técnico en soporte técnico e informático, ventas y marketing digital",
-        period: "Junio 2021 – Octubre 2023",
-        accent: "Soporte y operación",
-        icon: "briefcase",
-        summary:
-          "Me desempeñé brindando soporte técnico e informático, realizando instalación, configuración y mantenimiento de equipos, sistemas operativos, programas y aplicaciones. Apoyé el diagnóstico y solución de fallas de hardware y software, configuración de perfiles, correos y accesos, revisiones básicas de seguridad, pruebas de nuevas herramientas tecnológicas y acompañamiento a usuarios. Además, participé en actividades relacionadas con ventas y marketing digital, aportando soporte operativo y tecnológico al negocio.",
-        achievements: [
-          "Soporte técnico integral",
-          "Mantenimiento de equipos y sistemas",
-          "Configuración de accesos y correos",
-          "Apoyo en ventas y marketing digital",
-        ],
-      },
-    ],
     educationSection: {
       label: "Educación, formación y distinciones",
       title: "Una trayectoria académica construida desde bases técnicas hasta ingeniería profesional.",
       subtitle:
-        "Esta sección refuerza tu formación como profesional graduado y conecta tu base técnica con tus proyectos actuales.",
+        "Mi formación combina bases técnicas, aprendizaje constante y experiencia aplicada en proyectos reales de software.",
+      items: [
+        {
+          institution: "Universidad de San Buenaventura de Cali",
+          degree: "Ingeniería de Sistemas – Profesional graduado",
+          period: "Febrero 2021 – Marzo 2026",
+          description:
+            "Formación profesional enfocada en ingeniería de software, desarrollo de soluciones tecnológicas, bases de datos, análisis de sistemas, arquitectura, inteligencia artificial y construcción de proyectos aplicados.",
+          distinction: "Becas Diamante por excelencia académica en el bachillerato.",
+        },
+        {
+          institution: "Corporación Universitaria Autónoma de Nariño",
+          degree: "Técnico Laboral por competencias en Auxiliar en Sistemas Informáticos",
+          period: "Enero 2018 – Diciembre 2020",
+          description:
+            "Base técnica en soporte, sistemas informáticos, herramientas de desarrollo, mantenimiento, lógica computacional y fundamentos de programación.",
+          distinction: "Formación técnica orientada al desempeño laboral en tecnología.",
+        },
+        {
+          institution: "Centro Educativo Industrial Luis Madina",
+          degree: "Bachiller Técnico Industrial con énfasis en Sistemas Informáticos",
+          period: "2020",
+          description:
+            "Formación media técnica con orientación a sistemas informáticos, pensamiento lógico y competencias iniciales para el desarrollo tecnológico.",
+          distinction: "Énfasis técnico industrial en sistemas informáticos.",
+        },
+      ],
     },
-    education: [
-      {
-        institution: "Universidad de San Buenaventura de Cali",
-        degree: "Ingeniería de Sistemas – Profesional graduado",
-        period: "Febrero 2021 – Marzo 2026",
-        description:
-          "Formación profesional enfocada en ingeniería de software, desarrollo de soluciones tecnológicas, bases de datos, análisis de sistemas, arquitectura, inteligencia artificial y construcción de proyectos aplicados.",
-        distinction: "Becas Diamante por excelencia académica en el bachillerato.",
-      },
-      {
-        institution: "Corporación Universitaria Autónoma de Nariño",
-        degree: "Técnico Laboral por competencias en Auxiliar en Sistemas Informáticos",
-        period: "Enero 2018 – Diciembre 2020",
-        description:
-          "Base técnica en soporte, sistemas informáticos, herramientas de desarrollo, mantenimiento, lógica computacional y fundamentos de programación.",
-        distinction: "Formación técnica orientada al desempeño laboral en tecnología.",
-      },
-      {
-        institution: "Centro Educativo Industrial Luis Madina",
-        degree: "Bachiller Técnico Industrial con énfasis en Sistemas Informáticos",
-        period: "2020",
-        description:
-          "Formación media técnica con orientación a sistemas informáticos, pensamiento lógico y competencias iniciales para el desarrollo tecnológico.",
-        distinction: "Énfasis técnico industrial en sistemas informáticos.",
-      },
-    ],
     projectsSection: {
       label: "Proyectos destacados",
-      title: "Casos de estudio con contexto, solución e impacto.",
+      title: "Proyectos que muestran cómo construyo soluciones",
       subtitle:
-        "Cada proyecto comunica no solo la tecnología, sino también el reto, la solución implementada y el valor técnico del desarrollo.",
+        "Cada proyecto refleja un reto real, las decisiones técnicas que tomé y el resultado logrado con la solución.",
       challenge: "Reto",
       solution: "Solución",
+      items: [
+        {
+          name: "MindMate",
+          category: "Tesis de grado · Salud mental + IA",
+          badge: "Proyecto insignia",
+          description:
+            "Plataforma móvil y web diseñada como apoyo tecnológico para el monitoreo de pacientes con esquizofrenia. El sistema centraliza información clínica, síntomas, signos vitales y seguimiento médico-paciente, facilitando un acompañamiento más estructurado y orientado a datos. Integra componentes de inteligencia artificial para apoyar la predicción de subtipos de esquizofrenia y generar recomendaciones útiles para el proceso clínico.",
+          challenge:
+            "El reto principal fue construir una solución sensible y confiable para un contexto de salud mental, donde la trazabilidad, la seguridad de la información, la claridad de uso y el soporte clínico son elementos críticos.",
+          solution:
+            "Se desarrolló una arquitectura basada en Angular y Firebase, con autenticación, almacenamiento, base de datos en tiempo real, Cloud Functions y componentes de machine learning para aportar valor predictivo dentro del flujo funcional.",
+          impact: ["Gestión digital de historia clínica y seguimiento", "Predicción de subtipos mediante IA", "Comunicación entre médico y paciente", "Arquitectura móvil y web escalable"],
+          stack: ["Angular", "Firebase", "Firestore", "Auth", "Storage", "Realtime DB", "Cloud Functions", "Machine Learning"],
+        },
+        {
+          name: "Cali Conecta IA",
+          category: "Agentes inteligentes · WiFi público",
+          badge: "IA operativa",
+          description:
+            "Plataforma inteligente orientada al análisis de redes WiFi públicas, capaz de convertir datos operativos en información accionable para la toma de decisiones. El sistema permite identificar anomalías, consultar información en lenguaje natural y generar recomendaciones estratégicas apoyadas por modelos de IA.",
+          challenge:
+            "El desafío fue transformar datos técnicos de operación en una experiencia comprensible para usuarios no necesariamente técnicos, manteniendo valor analítico y capacidad de acción.",
+          solution:
+            "Se implementó una arquitectura con React, FastAPI y Supabase, combinando detección de anomalías con Isolation Forest y modelos de lenguaje para consultas inteligentes y recomendaciones operativas.",
+          impact: ["Detección de comportamientos anómalos", "Consultas en lenguaje natural", "Recomendaciones estratégicas para operación", "Análisis inteligente de infraestructura pública"],
+          stack: ["React", "FastAPI", "Supabase", "Isolation Forest", "LLM", "Python"],
+        },
+        {
+          name: "FacturaOps / Factura Autopilot",
+          category: "Automatización · Facturación electrónica",
+          badge: "Automatización inteligente",
+          description:
+            "Sistema enfocado en automatizar procesos posteriores a la emisión de facturas electrónicas. La plataforma facilita validación documental, consulta de estados, trazabilidad, extracción de información y ejecución automática de acciones repetitivas mediante herramientas de automatización e inteligencia artificial.",
+          challenge:
+            "Los procesos posteriores a la facturación suelen requerir revisión manual, seguimiento constante y validaciones repetitivas. El objetivo fue reducir carga operativa y aumentar trazabilidad.",
+          solution:
+            "Se diseñó un flujo backend con FastAPI, SQLite, SQLAlchemy y componentes de lectura documental usando PyPDF2, OCR y Selenium para automatizar tareas sobre documentos y plataformas externas.",
+          impact: ["Validación documental", "Trazabilidad operativa", "Extracción con OCR", "Automatización con Selenium"],
+          stack: ["Python", "FastAPI", "SQLite", "SQLAlchemy", "PyPDF2", "OCR", "Selenium"],
+        },
+        {
+          name: "Sistema de gestión para aerolínea",
+          category: "API REST + Frontend empresarial",
+          badge: "Arquitectura empresarial",
+          description:
+            "Sistema completo para apoyar la gestión de operaciones internas de una aerolínea. Incluye backend robusto, base de datos relacional, frontend administrativo y despliegue sobre infraestructura de servidor, orientado a mantener procesos organizados y centralizados.",
+          challenge:
+            "El proyecto exigía estructurar una solución mantenible, con separación clara entre backend, frontend, persistencia de datos y despliegue, simulando un entorno empresarial real.",
+          solution:
+            "Se implementó una API REST con Java Spring Boot, persistencia en PostgreSQL, frontend en Angular y despliegue apoyado en Jenkins y Apache Tomcat.",
+          impact: ["API REST mantenible", "Frontend administrativo", "Integración CI/CD", "Despliegue en servidor"],
+          stack: ["Java", "Spring Boot", "PostgreSQL", "Angular", "Jenkins", "Tomcat"],
+        },
+        {
+          name: "App móvil de carpooling",
+          category: "Movilidad colaborativa · Tipo BlaBlaCar",
+          badge: "Mobile product",
+          description:
+            "Aplicación móvil para conectar personas interesadas en compartir viajes, optimizar costos de transporte y mejorar la organización de rutas. El enfoque del proyecto fue crear una experiencia simple, funcional y centrada en usuarios que necesitan movilidad compartida.",
+          challenge:
+            "La solución requería manejar usuarios, viajes, disponibilidad, rutas y persistencia de datos en una experiencia móvil clara y eficiente.",
+          solution:
+            "Se desarrolló con Ionic y TypeScript, integrando MongoDB y Prisma para la gestión de datos y estructuración del modelo de información.",
+          impact: ["Gestión de viajes", "Conexión entre usuarios", "Optimización de costos", "Experiencia móvil"],
+          stack: ["Ionic", "TypeScript", "MongoDB", "Prisma"],
+        },
+        {
+          name: "Control de asistencia biométrica",
+          category: "Desktop · Reportería operativa",
+          badge: "Sistema de escritorio",
+          description:
+            "Solución de escritorio para automatizar el registro de asistencia mediante control biométrico, gestión de información y generación de reportes. El sistema está orientado a mejorar el control interno y reducir el manejo manual de registros.",
+          challenge:
+            "El proyecto debía garantizar almacenamiento estructurado, generación de reportes y facilidad de consulta para procesos administrativos.",
+          solution:
+            "Se implementó con C#, .NET, SQL Server y Crystal Reports, priorizando una experiencia de escritorio funcional y reportes listos para uso operativo.",
+          impact: ["Registro biométrico", "Reportes administrativos", "Automatización", "Control interno"],
+          stack: ["C#", ".NET", "SQL Server", "Crystal Reports"],
+        },
+      ],
     },
-    projects: [
-      {
-        name: "MindMate",
-        category: "Tesis de grado · Salud mental + IA",
-        badge: "Proyecto insignia",
-        description:
-          "Plataforma móvil y web diseñada como apoyo tecnológico para el monitoreo de pacientes con esquizofrenia. El sistema centraliza información clínica, síntomas, signos vitales y seguimiento médico-paciente, facilitando un acompañamiento más estructurado y orientado a datos. Integra componentes de inteligencia artificial para apoyar la predicción de subtipos de esquizofrenia y generar recomendaciones útiles para el proceso clínico.",
-        challenge:
-          "El reto principal fue construir una solución sensible y confiable para un contexto de salud mental, donde la trazabilidad, la seguridad de la información, la claridad de uso y el soporte clínico son elementos críticos.",
-        solution:
-          "Se desarrolló una arquitectura basada en Angular y Firebase, con autenticación, almacenamiento, base de datos en tiempo real, Cloud Functions y componentes de machine learning para aportar valor predictivo dentro del flujo funcional.",
-        impact: [
-          "Gestión digital de historia clínica y seguimiento",
-          "Predicción de subtipos mediante IA",
-          "Comunicación entre médico y paciente",
-          "Arquitectura móvil y web escalable",
-        ],
-        stack: ["Angular", "Firebase", "Firestore", "Auth", "Storage", "Realtime DB", "Cloud Functions", "Machine Learning"],
-      },
-      {
-        name: "Cali Conecta IA",
-        category: "Agentes inteligentes · WiFi público",
-        badge: "IA operativa",
-        description:
-          "Plataforma inteligente orientada al análisis de redes WiFi públicas, capaz de convertir datos operativos en información accionable para la toma de decisiones. El sistema permite identificar anomalías, consultar información en lenguaje natural y generar recomendaciones estratégicas apoyadas por modelos de IA.",
-        challenge:
-          "El desafío fue transformar datos técnicos de operación en una experiencia comprensible para usuarios no necesariamente técnicos, manteniendo valor analítico y capacidad de acción.",
-        solution:
-          "Se implementó una arquitectura con React, FastAPI y Supabase, combinando detección de anomalías con Isolation Forest y modelos de lenguaje para consultas inteligentes y recomendaciones operativas.",
-        impact: [
-          "Detección de comportamientos anómalos",
-          "Consultas en lenguaje natural",
-          "Recomendaciones estratégicas para operación",
-          "Análisis inteligente de infraestructura pública",
-        ],
-        stack: ["React", "FastAPI", "Supabase", "Isolation Forest", "LLM", "Python"],
-      },
-      {
-        name: "FacturaOps / Factura Autopilot",
-        category: "Automatización · Facturación electrónica",
-        badge: "Automatización inteligente",
-        description:
-          "Sistema enfocado en automatizar procesos posteriores a la emisión de facturas electrónicas. La plataforma facilita validación documental, consulta de estados, trazabilidad, extracción de información y ejecución automática de acciones repetitivas mediante herramientas de automatización e inteligencia artificial.",
-        challenge:
-          "Los procesos posteriores a la facturación suelen requerir revisión manual, seguimiento constante y validaciones repetitivas. El objetivo fue reducir carga operativa y aumentar trazabilidad.",
-        solution:
-          "Se diseñó un flujo backend con FastAPI, SQLite, SQLAlchemy y componentes de lectura documental usando PyPDF2, OCR y Selenium para automatizar tareas sobre documentos y plataformas externas.",
-        impact: ["Validación documental", "Trazabilidad operativa", "Extracción con OCR", "Automatización con Selenium"],
-        stack: ["Python", "FastAPI", "SQLite", "SQLAlchemy", "PyPDF2", "OCR", "Selenium"],
-      },
-      {
-        name: "Sistema de gestión para aerolínea",
-        category: "API REST + Frontend empresarial",
-        badge: "Arquitectura empresarial",
-        description:
-          "Sistema completo para apoyar la gestión de operaciones internas de una aerolínea. Incluye backend robusto, base de datos relacional, frontend administrativo y despliegue sobre infraestructura de servidor, orientado a mantener procesos organizados y centralizados.",
-        challenge:
-          "El proyecto exigía estructurar una solución mantenible, con separación clara entre backend, frontend, persistencia de datos y despliegue, simulando un entorno empresarial real.",
-        solution:
-          "Se implementó una API REST con Java Spring Boot, persistencia en PostgreSQL, frontend en Angular y despliegue apoyado en Jenkins y Apache Tomcat.",
-        impact: ["API REST mantenible", "Frontend administrativo", "Integración CI/CD", "Despliegue en servidor"],
-        stack: ["Java", "Spring Boot", "PostgreSQL", "Angular", "Jenkins", "Tomcat"],
-      },
-      {
-        name: "App móvil de carpooling",
-        category: "Movilidad colaborativa · Tipo BlaBlaCar",
-        badge: "Mobile product",
-        description:
-          "Aplicación móvil para conectar personas interesadas en compartir viajes, optimizar costos de transporte y mejorar la organización de rutas. El enfoque del proyecto fue crear una experiencia simple, funcional y centrada en usuarios que necesitan movilidad compartida.",
-        challenge:
-          "La solución requería manejar usuarios, viajes, disponibilidad, rutas y persistencia de datos en una experiencia móvil clara y eficiente.",
-        solution:
-          "Se desarrolló con Ionic y TypeScript, integrando MongoDB y Prisma para la gestión de datos y estructuración del modelo de información.",
-        impact: ["Gestión de viajes", "Conexión entre usuarios", "Optimización de costos", "Experiencia móvil"],
-        stack: ["Ionic", "TypeScript", "MongoDB", "Prisma"],
-      },
-      {
-        name: "Control de asistencia biométrica",
-        category: "Desktop · Reportería operativa",
-        badge: "Sistema de escritorio",
-        description:
-          "Solución de escritorio para automatizar el registro de asistencia mediante control biométrico, gestión de información y generación de reportes. El sistema está orientado a mejorar el control interno y reducir el manejo manual de registros.",
-        challenge:
-          "El proyecto debía garantizar almacenamiento estructurado, generación de reportes y facilidad de consulta para procesos administrativos.",
-        solution:
-          "Se implementó con C#, .NET, SQL Server y Crystal Reports, priorizando una experiencia de escritorio funcional y reportes listos para uso operativo.",
-        impact: ["Registro biométrico", "Reportes administrativos", "Automatización", "Control interno"],
-        stack: ["C#", ".NET", "SQL Server", "Crystal Reports"],
-      },
-    ],
     researchSection: {
       label: "Investigación y artículo científico",
       title: "MindMate: An Application for Symptom Monitoring and Clinical Support in Schizophrenia",
@@ -325,7 +324,7 @@ const content = {
       imageTitle: "Espacio para imagen del artículo",
       imageText:
         "Puedes poner aquí certificado, póster, portada del artículo, captura de la ponencia o evidencia del Congreso Internacional AmITIC 2025.",
-      imageUrl: "",
+      imageUrl: galleryImageRoutes.amitic,
     },
     aiSection: {
       label: "Inteligencia artificial aplicada",
@@ -348,12 +347,12 @@ const content = {
       subtitle:
         "Galería lista para capturas reales: dashboards, módulos, certificados, artículos, flujos de automatización y vistas móviles.",
       items: [
-        { title: "Dashboard de proyecto", subtitle: "Espacio para capturas de métricas, KPIs y visualización de datos.", tag: "UI / Analytics", imageUrl: "" },
-        { title: "MindMate", subtitle: "Capturas del módulo clínico, seguimiento de síntomas y experiencia médico-paciente.", tag: "HealthTech", imageUrl: "" },
-        { title: "Cali Conecta IA", subtitle: "Panel de anomalías, consultas inteligentes y recomendaciones operativas.", tag: "AI Ops", imageUrl: "" },
-        { title: "FacturaOps", subtitle: "Flujos de OCR, validación, trazabilidad y automatización documental.", tag: "Automation", imageUrl: "" },
-        { title: "Arquitectura backend", subtitle: "Diagramas, endpoints, despliegues o documentación técnica de APIs.", tag: "Backend", imageUrl: "" },
-        { title: "Reconocimientos y ponencias", subtitle: "Certificados, posters, artículo científico o evidencias académicas.", tag: "Research", imageUrl: "" },
+        { title: "MindMate", subtitle: "Capturas del módulo clínico, seguimiento de síntomas y experiencia médico-paciente.", tag: "HealthTech", imageUrl: galleryImageRoutes.mindmate },
+        { title: "InterMuniConnect", subtitle: "Vista de aplicación de movilidad colaborativa y experiencia responsive.", tag: "Mobile / Mobility", imageUrl: galleryImageRoutes.intermuniconnect },
+        { title: "Cali Conecta IA", subtitle: "Panel de anomalías, consultas inteligentes y recomendaciones operativas.", tag: "AI Ops", imageUrl: galleryImageRoutes.caliConecta },
+        { title: "FacturaOps", subtitle: "Flujos de OCR, validación, trazabilidad y automatización documental.", tag: "Automation", imageUrl: galleryImageRoutes.facturaops },
+        { title: "Sistema de aerolínea", subtitle: "Panel administrativo, API REST y arquitectura empresarial.", tag: "Enterprise", imageUrl: galleryImageRoutes.aerolinea },
+        { title: "Asistencia biométrica", subtitle: "Registro, reportes y automatización de control interno.", tag: "Desktop", imageUrl: galleryImageRoutes.asistencia },
       ],
     },
     contactSection: {
@@ -367,26 +366,31 @@ const content = {
   en: {
     ui: {
       languageButton: "Español",
-      menuLabel: "Open or close menu",
       contact: "Contact",
       sendEmail: "Send email",
       call: "Call",
-      linkedin: "LinkedIn",
       viewLinkedin: "View LinkedIn",
+      viewGithub: "View GitHub",
       viewProjects: "View featured projects",
       portfolioBadge: "Professional portfolio · Backend · AI · Automation",
       graduated: "Graduated professional",
       focusBadge: "AI + Architecture + Automation",
-      profilePhotoTitle: "Professional photo here",
-      profilePhotoText: "Add your image in photoUrl to make the hero section ready for recruiters.",
+      menuLabel: "Open or close menu",
       professionalInfo: "Professional information",
       name: "Name",
       email: "Email",
       phone: "Phone",
-      viewProfessionalProfile: "View professional profile",
-      githubPending: "GitHub pending",
+      linkedin: "LinkedIn",
+      github: "GitHub",
       demoPending: "Demo pending",
+      clickToExpand: "Click to expand image",
     },
+    heroCards: [
+      ["briefcase", "Professional profile", "Engineering + product"],
+      ["brain", "Applied AI", "Models and automation"],
+      ["server", "Solid backend", "APIs, data and deployment"],
+      ["linkedin", "Professional brand", "Recruiter-ready"],
+    ],
     profile: {
       role: "Systems Engineer",
       headline:
@@ -403,44 +407,46 @@ const content = {
       { label: "Gallery", href: "#galeria" },
       { label: "Contact", href: "#contacto" },
     ],
-    impactTitle: "Measurable results and a clear value proposition.",
-    impactSubtitle:
-      "My profile combines software development, artificial intelligence, automation and technical support, focused on building functional, maintainable solutions aligned with real business needs.",
-    impactLabel: "Impact summary",
-    impactStats: [
-      {
-        value: "+30 pts",
-        label: "Accuracy improvement",
-        detail: "AI-based request classification during my professional internship at DIAN.",
-      },
-      {
-        value: "-60%",
-        label: "Time reduction",
-        detail: "Optimization of the classification process through automation.",
-      },
-      {
-        value: "-40%",
-        label: "Fewer reprocesses",
-        detail: "Higher operational efficiency, traceability and process consistency.",
-      },
-    ],
-    valueCards: [
-      {
-        icon: "server",
-        title: "Backend and architecture",
-        text: "API development, service integration, modular design and maintainable software engineering.",
-      },
-      {
-        icon: "brain",
-        title: "AI and automation",
-        text: "Applied models, intelligent agents, institutional automation and process optimization.",
-      },
-      {
-        icon: "briefcase",
-        title: "Technical support and operations",
-        text: "Experience in IT support, failure diagnosis, system configuration and user assistance.",
-      },
-    ],
+    impact: {
+      label: "Impact summary",
+      title: "Measurable results and a clear value proposition.",
+      subtitle:
+        "My profile combines software development, artificial intelligence, automation and technical support, focused on building functional, maintainable solutions aligned with real business needs.",
+      stats: [
+        {
+          value: "+30 pts",
+          label: "Accuracy improvement",
+          detail: "AI-based request classification during my professional internship at DIAN.",
+        },
+        {
+          value: "-60%",
+          label: "Time reduction",
+          detail: "Optimization of the classification process through automation.",
+        },
+        {
+          value: "-40%",
+          label: "Fewer reprocesses",
+          detail: "Higher operational efficiency, traceability and process consistency.",
+        },
+      ],
+      valueCards: [
+        {
+          icon: "server",
+          title: "Backend and architecture",
+          text: "API development, service integration, modular design and maintainable software engineering.",
+        },
+        {
+          icon: "brain",
+          title: "AI and automation",
+          text: "Applied models, intelligent agents, institutional automation and process optimization.",
+        },
+        {
+          icon: "briefcase",
+          title: "Technical support and operations",
+          text: "Experience in IT support, failure diagnosis, system configuration and user assistance.",
+        },
+      ],
+    },
     profileSection: {
       label: "Professional profile",
       title: "A technical profile with judgment, impact and growth vision.",
@@ -455,216 +461,197 @@ const content = {
       title: "A complete stack to build, automate, analyze and deploy.",
       subtitle:
         "Organized by category so recruiters and technical leaders can quickly identify my real capabilities.",
+      groups: [
+        {
+          title: "Programming languages",
+          icon: "code",
+          skills: ["Python", "C++", "Java", "JavaScript", "TypeScript", "C#", "Go"],
+        },
+        {
+          title: "Backend & APIs",
+          icon: "server",
+          skills: ["Node.js", "FastAPI", "Spring Boot", ".NET Core", "Flask", "Django", "REST APIs"],
+        },
+        {
+          title: "Frontend & Mobile",
+          icon: "layers",
+          skills: ["Angular", "React", "Ionic", "Bootstrap", "HTML", "CSS", "Responsive UI"],
+        },
+        {
+          title: "Databases",
+          icon: "database",
+          skills: ["Oracle SQL", "PostgreSQL", "MySQL", "SQL Server", "MongoDB", "Redis", "Firebase", "SQLite"],
+        },
+        {
+          title: "Cloud, DevOps & deployment",
+          icon: "rocket",
+          skills: ["Firebase", "Supabase", "Docker", "Vercel", "Railway", "Jenkins", "Apache Tomcat"],
+        },
+        {
+          title: "AI, data & automation",
+          icon: "brain",
+          skills: ["Scikit-learn", "Anaconda", "Machine Learning", "LLM", "Prompt Engineering", "Power Apps", "Power Automate"],
+        },
+        {
+          title: "Professional tools",
+          icon: "terminal",
+          skills: ["Git", "GitHub", "Postman", "Visual Studio", "VS Code", "Rider", "PyCharm"],
+        },
+        {
+          title: "Software architectures",
+          icon: "shield",
+          skills: ["Clean Code", "Monolithic", "Microservices", "Clean Architecture", "Modular", "Hexagonal"],
+        },
+      ],
     },
-    skillGroups: [
-      {
-        title: "Programming languages",
-        icon: "code",
-        skills: ["Python", "C++", "Java", "JavaScript", "TypeScript", "C#", "Go"],
-      },
-      {
-        title: "Backend & APIs",
-        icon: "server",
-        skills: ["Node.js", "FastAPI", "Spring Boot", ".NET Core", "Flask", "Django", "REST APIs"],
-      },
-      {
-        title: "Frontend & Mobile",
-        icon: "layers",
-        skills: ["Angular", "React", "Ionic", "Bootstrap", "HTML", "CSS", "Responsive UI"],
-      },
-      {
-        title: "Databases",
-        icon: "database",
-        skills: ["Oracle SQL", "PostgreSQL", "MySQL", "SQL Server", "MongoDB", "Redis", "Firebase", "SQLite"],
-      },
-      {
-        title: "Cloud, DevOps & deployment",
-        icon: "rocket",
-        skills: ["Firebase", "Supabase", "Docker", "Vercel", "Railway", "Jenkins", "Apache Tomcat"],
-      },
-      {
-        title: "AI, data & automation",
-        icon: "brain",
-        skills: ["Scikit-learn", "Anaconda", "Machine Learning", "LLM", "Prompt Engineering", "Power Apps", "Power Automate"],
-      },
-      {
-        title: "Professional tools",
-        icon: "terminal",
-        skills: ["Git", "GitHub", "Postman", "Visual Studio", "VS Code", "Rider", "PyCharm"],
-      },
-      {
-        title: "Software architectures",
-        icon: "shield",
-        skills: ["Clean Code", "Monolithic", "Microservices", "Clean Architecture", "Modular", "Hexagonal"],
-      },
-    ],
     experienceSection: {
       label: "Professional experience",
       title: "Experience built across technology, operations and process improvement.",
       subtitle:
         "A background combining institutional automation, software solutions and technical support in real environments.",
+      items: [
+        {
+          company: "DIAN – Colombian Tax and Customs Authority",
+          role: "Systems Engineering Intern",
+          period: "Professional internship",
+          accent: "Institutional AI",
+          icon: "brain",
+          summary:
+            "During my professional internship, I contributed to the development and implementation of Power Platform solutions, integrating automation and artificial intelligence to optimize institutional processes. I worked on requirements analysis, technology solution design and operational traceability improvement, achieving gains in accuracy, time reduction and fewer reprocesses.",
+          achievements: ["+30 percentage points in accuracy", "-60% classification time", "-40% operational reprocesses"],
+        },
+        {
+          company: "Confecciones Nemetex SAS",
+          role: "IT support technician, sales and digital marketing",
+          period: "June 2021 – October 2023",
+          accent: "Support and operations",
+          icon: "briefcase",
+          summary:
+            "I provided technical and IT support, including installation, configuration and maintenance of computers, operating systems, programs and applications. I supported hardware and software failure diagnosis, user profiles, email accounts and access configuration, basic security reviews, testing of new technology tools and user assistance. I also participated in sales and digital marketing activities, providing operational and technological support to the business.",
+          achievements: ["Comprehensive IT support", "Systems and equipment maintenance", "Access and email configuration", "Sales and digital marketing support"],
+        },
+      ],
     },
-    experiences: [
-      {
-        company: "DIAN – Colombian Tax and Customs Authority",
-        role: "Systems Engineering Intern",
-        period: "Professional internship",
-        accent: "Institutional AI",
-        icon: "brain",
-        summary:
-          "During my professional internship, I contributed to the development and implementation of Power Platform solutions, integrating automation and artificial intelligence to optimize institutional processes. I worked on requirements analysis, technology solution design and operational traceability improvement, achieving gains in accuracy, time reduction and fewer reprocesses.",
-        achievements: [
-          "+30 percentage points in accuracy",
-          "-60% classification time",
-          "-40% operational reprocesses",
-        ],
-      },
-      {
-        company: "Confecciones Nemetex SAS",
-        role: "IT support technician, sales and digital marketing",
-        period: "June 2021 – October 2023",
-        accent: "Support and operations",
-        icon: "briefcase",
-        summary:
-          "I provided technical and IT support, including installation, configuration and maintenance of computers, operating systems, programs and applications. I supported hardware and software failure diagnosis, user profiles, email accounts and access configuration, basic security reviews, testing of new technology tools and user assistance. I also participated in sales and digital marketing activities, providing operational and technological support to the business.",
-        achievements: [
-          "Comprehensive IT support",
-          "Systems and equipment maintenance",
-          "Access and email configuration",
-          "Sales and digital marketing support",
-        ],
-      },
-    ],
     educationSection: {
       label: "Education, training and distinctions",
       title: "An academic path built from technical foundations to professional engineering.",
       subtitle:
         "This section strengthens my profile as a graduated professional and connects my technical background with my current projects.",
+      items: [
+        {
+          institution: "Universidad de San Buenaventura Cali",
+          degree: "Systems Engineering – Graduated professional",
+          period: "February 2021 – March 2026",
+          description:
+            "Professional education focused on software engineering, technology solution development, databases, systems analysis, architecture, artificial intelligence and applied projects.",
+          distinction: "Diamond Scholarships for academic excellence during high school.",
+        },
+        {
+          institution: "Corporación Universitaria Autónoma de Nariño",
+          degree: "Technical Labor Program in IT Systems Assistance",
+          period: "January 2018 – December 2020",
+          description:
+            "Technical foundation in support, information systems, development tools, maintenance, computational logic and programming fundamentals.",
+          distinction: "Technical training focused on job performance in technology.",
+        },
+        {
+          institution: "Centro Educativo Industrial Luis Madina",
+          degree: "Industrial Technical High School Diploma with emphasis in IT Systems",
+          period: "2020",
+          description:
+            "Technical secondary education focused on IT systems, logical thinking and initial skills for technology development.",
+          distinction: "Industrial technical emphasis in information systems.",
+        },
+      ],
     },
-    education: [
-      {
-        institution: "Universidad de San Buenaventura Cali",
-        degree: "Systems Engineering – Graduated professional",
-        period: "February 2021 – March 2026",
-        description:
-          "Professional education focused on software engineering, technology solution development, databases, systems analysis, architecture, artificial intelligence and applied projects.",
-        distinction: "Diamond Scholarships for academic excellence during high school.",
-      },
-      {
-        institution: "Corporación Universitaria Autónoma de Nariño",
-        degree: "Technical Labor Program in IT Systems Assistance",
-        period: "January 2018 – December 2020",
-        description:
-          "Technical foundation in support, information systems, development tools, maintenance, computational logic and programming fundamentals.",
-        distinction: "Technical training focused on job performance in technology.",
-      },
-      {
-        institution: "Centro Educativo Industrial Luis Madina",
-        degree: "Industrial Technical High School Diploma with emphasis in IT Systems",
-        period: "2020",
-        description:
-          "Technical secondary education focused on IT systems, logical thinking and initial skills for technology development.",
-        distinction: "Industrial technical emphasis in information systems.",
-      },
-    ],
     projectsSection: {
       label: "Featured projects",
-      title: "Case studies with context, solution and impact.",
+      title: "Projects that show how I build solutions",
       subtitle:
-        "Each project communicates not only the technology used, but also the challenge, implemented solution and technical value.",
+        "Each project reflects a real challenge, the technical decisions I made and the outcome achieved through the solution.",
       challenge: "Challenge",
       solution: "Solution",
+      items: [
+        {
+          name: "MindMate",
+          category: "Graduation thesis · Mental health + AI",
+          badge: "Flagship project",
+          description:
+            "Mobile and web platform designed as a technological support tool for monitoring patients with schizophrenia. The system centralizes clinical information, symptoms, vital signs and doctor-patient follow-up, enabling a more structured and data-oriented support process. It integrates artificial intelligence components to support schizophrenia subtype prediction and generate useful clinical recommendations.",
+          challenge:
+            "The main challenge was building a sensitive and reliable solution for a mental health context, where traceability, data security, usability and clinical support are critical elements.",
+          solution:
+            "An architecture based on Angular and Firebase was developed, including authentication, storage, real-time database, Cloud Functions and machine learning components to add predictive value to the functional workflow.",
+          impact: ["Digital clinical history and monitoring", "AI-based subtype prediction", "Doctor-patient communication", "Scalable mobile and web architecture"],
+          stack: ["Angular", "Firebase", "Firestore", "Auth", "Storage", "Realtime DB", "Cloud Functions", "Machine Learning"],
+        },
+        {
+          name: "Cali Conecta AI",
+          category: "Intelligent agents · Public WiFi",
+          badge: "Operational AI",
+          description:
+            "Intelligent platform focused on analyzing public WiFi networks, capable of turning operational data into actionable information for decision-making. The system enables anomaly detection, natural language queries and strategic recommendations supported by AI models.",
+          challenge:
+            "The challenge was to transform technical operational data into an understandable experience for non-technical users while preserving analytical value and actionability.",
+          solution:
+            "An architecture using React, FastAPI and Supabase was implemented, combining anomaly detection with Isolation Forest and language models for intelligent queries and operational recommendations.",
+          impact: ["Anomaly behavior detection", "Natural language queries", "Strategic operational recommendations", "Smart analysis of public infrastructure"],
+          stack: ["React", "FastAPI", "Supabase", "Isolation Forest", "LLM", "Python"],
+        },
+        {
+          name: "FacturaOps / Factura Autopilot",
+          category: "Automation · Electronic invoicing",
+          badge: "Intelligent automation",
+          description:
+            "System focused on automating post-issuance electronic invoicing processes. The platform supports document validation, status checks, traceability, information extraction and automatic execution of repetitive actions through automation and AI tools.",
+          challenge:
+            "Post-invoicing processes often require manual review, constant follow-up and repetitive validations. The objective was to reduce operational workload and increase traceability.",
+          solution:
+            "A backend workflow was designed with FastAPI, SQLite, SQLAlchemy and document reading components using PyPDF2, OCR and Selenium to automate tasks over documents and external platforms.",
+          impact: ["Document validation", "Operational traceability", "OCR extraction", "Selenium automation"],
+          stack: ["Python", "FastAPI", "SQLite", "SQLAlchemy", "PyPDF2", "OCR", "Selenium"],
+        },
+        {
+          name: "Airline management system",
+          category: "REST API + Enterprise frontend",
+          badge: "Enterprise architecture",
+          description:
+            "Complete system supporting internal airline operations management. It includes a robust backend, relational database, administrative frontend and server-based deployment, focused on keeping processes organized and centralized.",
+          challenge:
+            "The project required a maintainable solution with clear separation between backend, frontend, data persistence and deployment, simulating a real enterprise environment.",
+          solution:
+            "A REST API was implemented with Java Spring Boot, PostgreSQL persistence, Angular frontend and deployment supported by Jenkins and Apache Tomcat.",
+          impact: ["Maintainable REST API", "Administrative frontend", "CI/CD integration", "Server deployment"],
+          stack: ["Java", "Spring Boot", "PostgreSQL", "Angular", "Jenkins", "Tomcat"],
+        },
+        {
+          name: "Carpooling mobile app",
+          category: "Collaborative mobility · BlaBlaCar-like",
+          badge: "Mobile product",
+          description:
+            "Mobile application for connecting people interested in sharing trips, optimizing transportation costs and improving route organization. The project focused on creating a simple, functional and user-centered experience for shared mobility.",
+          challenge:
+            "The solution required handling users, trips, availability, routes and data persistence within a clear and efficient mobile experience.",
+          solution:
+            "It was developed with Ionic and TypeScript, integrating MongoDB and Prisma for data management and information modeling.",
+          impact: ["Trip management", "User connection", "Cost optimization", "Mobile experience"],
+          stack: ["Ionic", "TypeScript", "MongoDB", "Prisma"],
+        },
+        {
+          name: "Biometric attendance control",
+          category: "Desktop · Operational reporting",
+          badge: "Desktop system",
+          description:
+            "Desktop solution for automating attendance registration through biometric control, information management and report generation. The system is focused on improving internal control and reducing manual record handling.",
+          challenge:
+            "The project had to guarantee structured storage, report generation and easy querying for administrative processes.",
+          solution:
+            "It was implemented with C#, .NET, SQL Server and Crystal Reports, prioritizing a functional desktop experience and ready-to-use operational reports.",
+          impact: ["Biometric registration", "Administrative reports", "Automation", "Internal control"],
+          stack: ["C#", ".NET", "SQL Server", "Crystal Reports"],
+        },
+      ],
     },
-    projects: [
-      {
-        name: "MindMate",
-        category: "Graduation thesis · Mental health + AI",
-        badge: "Flagship project",
-        description:
-          "Mobile and web platform designed as a technological support tool for monitoring patients with schizophrenia. The system centralizes clinical information, symptoms, vital signs and doctor-patient follow-up, enabling a more structured and data-oriented support process. It integrates artificial intelligence components to support schizophrenia subtype prediction and generate useful clinical recommendations.",
-        challenge:
-          "The main challenge was building a sensitive and reliable solution for a mental health context, where traceability, data security, usability and clinical support are critical elements.",
-        solution:
-          "An architecture based on Angular and Firebase was developed, including authentication, storage, real-time database, Cloud Functions and machine learning components to add predictive value to the functional workflow.",
-        impact: [
-          "Digital clinical history and monitoring",
-          "AI-based subtype prediction",
-          "Doctor-patient communication",
-          "Scalable mobile and web architecture",
-        ],
-        stack: ["Angular", "Firebase", "Firestore", "Auth", "Storage", "Realtime DB", "Cloud Functions", "Machine Learning"],
-      },
-      {
-        name: "Cali Conecta AI",
-        category: "Intelligent agents · Public WiFi",
-        badge: "Operational AI",
-        description:
-          "Intelligent platform focused on analyzing public WiFi networks, capable of turning operational data into actionable information for decision-making. The system enables anomaly detection, natural language queries and strategic recommendations supported by AI models.",
-        challenge:
-          "The challenge was to transform technical operational data into an understandable experience for non-technical users while preserving analytical value and actionability.",
-        solution:
-          "An architecture using React, FastAPI and Supabase was implemented, combining anomaly detection with Isolation Forest and language models for intelligent queries and operational recommendations.",
-        impact: [
-          "Anomaly behavior detection",
-          "Natural language queries",
-          "Strategic operational recommendations",
-          "Smart analysis of public infrastructure",
-        ],
-        stack: ["React", "FastAPI", "Supabase", "Isolation Forest", "LLM", "Python"],
-      },
-      {
-        name: "FacturaOps / Factura Autopilot",
-        category: "Automation · Electronic invoicing",
-        badge: "Intelligent automation",
-        description:
-          "System focused on automating post-issuance electronic invoicing processes. The platform supports document validation, status checks, traceability, information extraction and automatic execution of repetitive actions through automation and AI tools.",
-        challenge:
-          "Post-invoicing processes often require manual review, constant follow-up and repetitive validations. The objective was to reduce operational workload and increase traceability.",
-        solution:
-          "A backend workflow was designed with FastAPI, SQLite, SQLAlchemy and document reading components using PyPDF2, OCR and Selenium to automate tasks over documents and external platforms.",
-        impact: ["Document validation", "Operational traceability", "OCR extraction", "Selenium automation"],
-        stack: ["Python", "FastAPI", "SQLite", "SQLAlchemy", "PyPDF2", "OCR", "Selenium"],
-      },
-      {
-        name: "Airline management system",
-        category: "REST API + Enterprise frontend",
-        badge: "Enterprise architecture",
-        description:
-          "Complete system supporting internal airline operations management. It includes a robust backend, relational database, administrative frontend and server-based deployment, focused on keeping processes organized and centralized.",
-        challenge:
-          "The project required a maintainable solution with clear separation between backend, frontend, data persistence and deployment, simulating a real enterprise environment.",
-        solution:
-          "A REST API was implemented with Java Spring Boot, PostgreSQL persistence, Angular frontend and deployment supported by Jenkins and Apache Tomcat.",
-        impact: ["Maintainable REST API", "Administrative frontend", "CI/CD integration", "Server deployment"],
-        stack: ["Java", "Spring Boot", "PostgreSQL", "Angular", "Jenkins", "Tomcat"],
-      },
-      {
-        name: "Carpooling mobile app",
-        category: "Collaborative mobility · BlaBlaCar-like",
-        badge: "Mobile product",
-        description:
-          "Mobile application for connecting people interested in sharing trips, optimizing transportation costs and improving route organization. The project focused on creating a simple, functional and user-centered experience for shared mobility.",
-        challenge:
-          "The solution required handling users, trips, availability, routes and data persistence within a clear and efficient mobile experience.",
-        solution:
-          "It was developed with Ionic and TypeScript, integrating MongoDB and Prisma for data management and information modeling.",
-        impact: ["Trip management", "User connection", "Cost optimization", "Mobile experience"],
-        stack: ["Ionic", "TypeScript", "MongoDB", "Prisma"],
-      },
-      {
-        name: "Biometric attendance control",
-        category: "Desktop · Operational reporting",
-        badge: "Desktop system",
-        description:
-          "Desktop solution for automating attendance registration through biometric control, information management and report generation. The system is focused on improving internal control and reducing manual record handling.",
-        challenge:
-          "The project had to guarantee structured storage, report generation and easy querying for administrative processes.",
-        solution:
-          "It was implemented with C#, .NET, SQL Server and Crystal Reports, prioritizing a functional desktop experience and ready-to-use operational reports.",
-        impact: ["Biometric registration", "Administrative reports", "Automation", "Internal control"],
-        stack: ["C#", ".NET", "SQL Server", "Crystal Reports"],
-      },
-    ],
     researchSection: {
       label: "Research and scientific article",
       title: "MindMate: An Application for Symptom Monitoring and Clinical Support in Schizophrenia",
@@ -678,7 +665,7 @@ const content = {
       imageTitle: "Article image space",
       imageText:
         "You can place here a certificate, poster, article cover, presentation screenshot or evidence from the International Congress AmITIC 2025.",
-      imageUrl: "",
+      imageUrl: galleryImageRoutes.amitic,
     },
     aiSection: {
       label: "Applied artificial intelligence",
@@ -701,12 +688,12 @@ const content = {
       subtitle:
         "A gallery ready for real screenshots: dashboards, modules, certificates, articles, automation flows and mobile views.",
       items: [
-        { title: "Project dashboard", subtitle: "Space for metrics, KPIs and data visualization screenshots.", tag: "UI / Analytics", imageUrl: "" },
-        { title: "MindMate", subtitle: "Screenshots of the clinical module, symptom monitoring and doctor-patient experience.", tag: "HealthTech", imageUrl: "" },
-        { title: "Cali Conecta AI", subtitle: "Anomaly panel, intelligent queries and operational recommendations.", tag: "AI Ops", imageUrl: "" },
-        { title: "FacturaOps", subtitle: "OCR, validation, traceability and document automation flows.", tag: "Automation", imageUrl: "" },
-        { title: "Backend architecture", subtitle: "Diagrams, endpoints, deployments or API technical documentation.", tag: "Backend", imageUrl: "" },
-        { title: "Awards and talks", subtitle: "Certificates, posters, scientific article or academic evidence.", tag: "Research", imageUrl: "" },
+        { title: "MindMate", subtitle: "Screenshots of the clinical module, symptom monitoring and doctor-patient experience.", tag: "HealthTech", imageUrl: galleryImageRoutes.mindmate },
+        { title: "InterMuniConnect", subtitle: "Collaborative mobility application and responsive experience.", tag: "Mobile / Mobility", imageUrl: galleryImageRoutes.intermuniconnect },
+        { title: "Cali Conecta AI", subtitle: "Anomaly panel, intelligent queries and operational recommendations.", tag: "AI Ops", imageUrl: galleryImageRoutes.caliConecta },
+        { title: "FacturaOps", subtitle: "OCR, validation, traceability and document automation flows.", tag: "Automation", imageUrl: galleryImageRoutes.facturaops },
+        { title: "Airline system", subtitle: "Administrative panel, REST API and enterprise architecture.", tag: "Enterprise", imageUrl: galleryImageRoutes.aerolinea },
+        { title: "Biometric attendance", subtitle: "Registration, reports and internal control automation.", tag: "Desktop", imageUrl: galleryImageRoutes.asistencia },
       ],
     },
     contactSection: {
@@ -794,19 +781,52 @@ function SectionLabel({ icon = "sparkles", children }) {
 
 function LanguageToggle({ lang, setLang, text }) {
   const nextLang = lang === "es" ? "en" : "es";
-
   return (
     <button
       type="button"
       onClick={() => setLang(nextLang)}
       className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-4 py-2 text-sm font-bold text-white transition hover:scale-[1.02] hover:bg-white/12"
-      aria-label="Change language"
+      aria-label="Cambiar idioma / Change language"
     >
       <span className="grid h-6 w-6 place-items-center rounded-full bg-gradient-to-br from-fuchsia-400 via-cyan-300 to-amber-300 text-xs font-black text-slate-950">
         {nextLang.toUpperCase()}
       </span>
       {text}
     </button>
+  );
+}
+
+function ZoomableImage({ imageUrl, title, alt, onPreview, className = "h-full w-full object-cover" }) {
+  return (
+    <button
+      type="button"
+      onClick={() => onPreview(imageUrl, title)}
+      className="group relative h-full w-full overflow-hidden text-left"
+      aria-label={`Ampliar imagen ${title}`}
+    >
+      <img src={imageUrl} alt={alt || title} className={`${className} transition duration-500 group-hover:scale-105`} loading="lazy" />
+      <span className="absolute bottom-4 right-4 rounded-full border border-white/10 bg-black/45 px-3 py-1 text-xs font-semibold text-white opacity-0 backdrop-blur transition group-hover:opacity-100">
+        Click / Zoom
+      </span>
+    </button>
+  );
+}
+
+function ImagePreviewModal({ previewImage, onClose }) {
+  if (!previewImage) return null;
+
+  return (
+    <div className="fixed inset-0 z-[100] grid place-items-center bg-black/80 p-4 backdrop-blur-md" onClick={onClose}>
+      <button type="button" className="absolute right-5 top-5 grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-white/10 text-white" aria-label="Cerrar imagen">
+        <Icon name="x" className="h-5 w-5" />
+      </button>
+      <div className="max-h-[88vh] max-w-6xl overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950 shadow-2xl" onClick={(event) => event.stopPropagation()}>
+        <img src={previewImage.imageUrl} alt={previewImage.title} className="max-h-[78vh] w-full object-contain" />
+        <div className="border-t border-white/10 p-4">
+          <p className="font-bold text-white">{previewImage.title}</p>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -824,20 +844,15 @@ function ProfilePhotoCard({ t }) {
                 <motion.div animate={{ scale: [1, 1.04, 1] }} transition={{ duration: 3, repeat: Infinity }} className="mb-5 grid h-24 w-24 place-items-center rounded-full border border-white/10 bg-white/5 text-white shadow-xl">
                   <Icon name="user" className="h-12 w-12" />
                 </motion.div>
-                <p className="text-lg font-bold text-white">{t.ui.profilePhotoTitle}</p>
-                <p className="mt-2 max-w-xs px-6 text-sm leading-6 text-slate-300">{t.ui.profilePhotoText}</p>
+                <p className="text-lg font-bold text-white">Profile photo</p>
+                <p className="mt-2 max-w-xs px-6 text-sm leading-6 text-slate-300">Add your image in photoUrl.</p>
               </div>
             )}
           </div>
         </div>
 
         <div className="mt-5 grid gap-3 sm:grid-cols-2">
-          {[
-            ["briefcase", langSafe(t, "profileProfessional", "Perfil profesional", "Professional profile")],
-            ["brain", langSafe(t, "appliedAI", "IA aplicada", "Applied AI")],
-            ["server", langSafe(t, "solidBackend", "Backend sólido", "Solid backend")],
-            ["linkedin", langSafe(t, "professionalBrand", "Marca profesional", "Professional brand")],
-          ].map(([icon, title], index) => (
+          {t.heroCards.map(([icon, title, subtitle], index) => (
             <motion.div key={title} whileHover={{ y: -4, scale: 1.02 }} className="rounded-3xl border border-white/10 bg-white/[0.06] p-4 backdrop-blur-xl">
               <div className="flex items-center gap-3">
                 <div className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-fuchsia-400/20 via-cyan-300/20 to-amber-300/20 text-cyan-100">
@@ -845,7 +860,7 @@ function ProfilePhotoCard({ t }) {
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-white">{title}</p>
-                  <p className="text-xs text-slate-400">{index === 0 ? "Engineering + Product" : index === 1 ? "Models + Automation" : index === 2 ? "APIs + Data + Deploy" : "Recruiter-ready"}</p>
+                  <p className="text-xs text-slate-400">{subtitle}</p>
                 </div>
               </div>
             </motion.div>
@@ -856,42 +871,20 @@ function ProfilePhotoCard({ t }) {
   );
 }
 
-function langSafe(t, key, es, en) {
-  return t.ui.languageButton === "English" ? es : en;
-}
-
 function ImpactSection({ t }) {
   return (
     <section className="relative mx-auto max-w-7xl px-5 pb-10 lg:px-8">
       <div className="grid gap-6 lg:grid-cols-[1.15fr_.85fr]">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeUp}
-          transition={{ duration: 0.55 }}
-          className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.06] p-7 backdrop-blur-xl"
-        >
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} transition={{ duration: 0.55 }} className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.06] p-7 backdrop-blur-xl">
           <div className="absolute right-0 top-0 h-44 w-44 rounded-full bg-cyan-400/10 blur-3xl" />
           <div className="absolute bottom-0 left-0 h-44 w-44 rounded-full bg-fuchsia-400/10 blur-3xl" />
-
           <div className="relative">
-            <SectionLabel icon="sparkles">{t.impactLabel}</SectionLabel>
-            <h2 className="max-w-2xl text-3xl font-black tracking-tight sm:text-4xl">{t.impactTitle}</h2>
-            <p className="mt-4 max-w-3xl text-slate-300 leading-7">{t.impactSubtitle}</p>
-
+            <SectionLabel icon="sparkles">{t.impact.label}</SectionLabel>
+            <h2 className="max-w-2xl text-3xl font-black tracking-tight sm:text-4xl">{t.impact.title}</h2>
+            <p className="mt-4 max-w-3xl text-slate-300 leading-7">{t.impact.subtitle}</p>
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              {t.impactStats.map((item, index) => (
-                <motion.div
-                  key={item.label}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeUp}
-                  transition={{ duration: 0.45, delay: index * 0.05 }}
-                  whileHover={{ y: -4 }}
-                  className="rounded-[1.8rem] border border-white/10 bg-slate-950/25 p-5"
-                >
+              {t.impact.stats.map((item, index) => (
+                <motion.div key={item.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} transition={{ duration: 0.45, delay: index * 0.05 }} whileHover={{ y: -4 }} className="rounded-[1.8rem] border border-white/10 bg-slate-950/25 p-5">
                   <p className="bg-gradient-to-r from-white via-cyan-100 to-fuchsia-100 bg-clip-text text-3xl font-black text-transparent">{item.value}</p>
                   <p className="mt-2 text-sm font-semibold text-cyan-100">{item.label}</p>
                   <p className="mt-2 text-sm leading-6 text-slate-400">{item.detail}</p>
@@ -902,17 +895,8 @@ function ImpactSection({ t }) {
         </motion.div>
 
         <div className="grid gap-4">
-          {t.valueCards.map((card, index) => (
-            <motion.div
-              key={card.title}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeUp}
-              transition={{ duration: 0.45, delay: index * 0.06 }}
-              whileHover={{ y: -4 }}
-              className="rounded-[2rem] border border-white/10 bg-white/[0.06] p-5 backdrop-blur-xl"
-            >
+          {t.impact.valueCards.map((card, index) => (
+            <motion.div key={card.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} transition={{ duration: 0.45, delay: index * 0.06 }} whileHover={{ y: -4 }} className="rounded-[2rem] border border-white/10 bg-white/[0.06] p-5 backdrop-blur-xl">
               <div className="flex items-start gap-4">
                 <div className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-fuchsia-400/20 via-cyan-300/20 to-amber-300/20 text-white">
                   <FloatingIcon name={card.icon} className="h-5 w-5" delay={index * 0.15} />
@@ -930,9 +914,25 @@ function ImpactSection({ t }) {
   );
 }
 
+function SectionHeader({ labelIcon, label, title, subtitle }) {
+  return (
+    <>
+      <SectionLabel icon={labelIcon}>{label}</SectionLabel>
+      <div className="mb-10 flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
+        <h2 className="max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">{title}</h2>
+        {subtitle ? <p className="max-w-xl text-slate-400">{subtitle}</p> : null}
+      </div>
+    </>
+  );
+}
+
 function App() {
   const [openMenu, setOpenMenu] = useState(false);
-  const [lang, setLang] = useState(() => localStorage.getItem("portfolio-lang") || "es");
+  const [previewImage, setPreviewImage] = useState(null);
+  const [lang, setLang] = useState(() => {
+    if (typeof window === "undefined") return "es";
+    return localStorage.getItem("portfolio-lang") || "es";
+  });
 
   useEffect(() => {
     localStorage.setItem("portfolio-lang", lang);
@@ -940,6 +940,8 @@ function App() {
 
   const t = content[lang];
   const cleanPhone = profile.phone.replace(/\s/g, "");
+  const openImagePreview = (imageUrl, title) => setPreviewImage({ imageUrl, title });
+  const closeImagePreview = () => setPreviewImage(null);
 
   return (
     <main className="min-h-screen scroll-smooth bg-[#070B17] text-white">
@@ -953,7 +955,9 @@ function App() {
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#070B17]/70 backdrop-blur-2xl">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
           <a href="#inicio" className="group flex items-center gap-3">
-            <motion.div animate={{ rotate: [0, 3, -3, 0], y: [0, -2, 0] }} transition={{ duration: 4, repeat: Infinity }} className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-fuchsia-400 via-cyan-300 to-amber-300 font-black text-slate-950 shadow-lg shadow-fuchsia-500/20">BT</motion.div>
+            <motion.div animate={{ rotate: [0, 3, -3, 0], y: [0, -2, 0] }} transition={{ duration: 4, repeat: Infinity }} className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-fuchsia-400 via-cyan-300 to-amber-300 font-black text-slate-950 shadow-lg shadow-fuchsia-500/20">
+              BT
+            </motion.div>
             <div>
               <p className="text-sm font-bold leading-none">Brandon Tobar</p>
               <p className="text-xs text-slate-400">{t.profile.role}</p>
@@ -962,7 +966,9 @@ function App() {
 
           <div className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 xl:flex">
             {t.navItems.map((item) => (
-              <a key={item.href} href={item.href} className="rounded-full px-3 py-2 text-sm text-slate-300 transition hover:bg-white/10 hover:text-white">{item.label}</a>
+              <a key={item.href} href={item.href} className="rounded-full px-3 py-2 text-sm text-slate-300 transition hover:bg-white/10 hover:text-white">
+                {item.label}
+              </a>
             ))}
           </div>
 
@@ -971,7 +977,12 @@ function App() {
             <a href={profile.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:bg-white/10">
               <FloatingIcon name="linkedin" className="h-4 w-4" /> LinkedIn
             </a>
-            <a href={`mailto:${profile.email}`} className="rounded-full bg-white px-5 py-2.5 text-sm font-bold text-slate-950 transition hover:scale-[1.02] hover:bg-amber-100">{t.ui.contact}</a>
+            <a href={profile.github} target="_blank" rel="noreferrer" className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/6 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:bg-white/10 2xl:inline-flex">
+              <FloatingIcon name="github" className="h-4 w-4" /> GitHub
+            </a>
+            <a href={`mailto:${profile.email}`} className="rounded-full bg-white px-5 py-2.5 text-sm font-bold text-slate-950 transition hover:scale-[1.02] hover:bg-amber-100">
+              {t.ui.contact}
+            </a>
           </div>
 
           <button type="button" onClick={() => setOpenMenu(!openMenu)} className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/5 xl:hidden" aria-label={t.ui.menuLabel}>
@@ -986,9 +997,12 @@ function App() {
                 <LanguageToggle lang={lang} setLang={setLang} text={t.ui.languageButton} />
               </div>
               {t.navItems.map((item) => (
-                <a key={item.href} href={item.href} onClick={() => setOpenMenu(false)} className="rounded-xl px-4 py-3 text-sm text-slate-300 hover:bg-white/10 hover:text-white">{item.label}</a>
+                <a key={item.href} href={item.href} onClick={() => setOpenMenu(false)} className="rounded-xl px-4 py-3 text-sm text-slate-300 hover:bg-white/10 hover:text-white">
+                  {item.label}
+                </a>
               ))}
               <a href={profile.linkedin} target="_blank" rel="noreferrer" className="rounded-xl px-4 py-3 text-sm text-slate-300 hover:bg-white/10 hover:text-white">LinkedIn</a>
+              <a href={profile.github} target="_blank" rel="noreferrer" className="rounded-xl px-4 py-3 text-sm text-slate-300 hover:bg-white/10 hover:text-white">GitHub</a>
             </div>
           </div>
         )}
@@ -1007,8 +1021,15 @@ function App() {
           </div>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300">{t.profile.headline}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href="#proyectos" className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-fuchsia-400 via-cyan-300 to-amber-300 px-6 py-4 font-bold text-slate-950 shadow-xl shadow-fuchsia-950/30 transition hover:scale-[1.02]">{t.ui.viewProjects} <Icon name="arrow" className="h-5 w-5 transition group-hover:translate-x-1" /></a>
-            <a href={profile.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/8 px-6 py-4 font-bold text-white backdrop-blur transition hover:bg-white/12"><FloatingIcon name="linkedin" className="h-5 w-5" />{t.ui.viewLinkedin}</a>
+            <a href="#proyectos" className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-fuchsia-400 via-cyan-300 to-amber-300 px-6 py-4 font-bold text-slate-950 shadow-xl shadow-fuchsia-950/30 transition hover:scale-[1.02]">
+              {t.ui.viewProjects} <Icon name="arrow" className="h-5 w-5 transition group-hover:translate-x-1" />
+            </a>
+            <a href={profile.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/8 px-6 py-4 font-bold text-white backdrop-blur transition hover:bg-white/12">
+              <FloatingIcon name="linkedin" className="h-5 w-5" /> {t.ui.viewLinkedin}
+            </a>
+            <a href={profile.github} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/8 px-6 py-4 font-bold text-white backdrop-blur transition hover:bg-white/12">
+              <FloatingIcon name="github" className="h-5 w-5" /> {t.ui.viewGithub}
+            </a>
           </div>
           <div className="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
             <div className="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-300"><FloatingIcon name="phone" className="h-4 w-4 text-cyan-300" />{profile.phone}</div>
@@ -1037,16 +1058,14 @@ function App() {
       </section>
 
       <section id="skills" className="relative mx-auto max-w-7xl px-5 py-16 lg:px-8">
-        <SectionLabel icon="terminal">{t.skillsSection.label}</SectionLabel>
-        <div className="mb-10 flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
-          <h2 className="max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">{t.skillsSection.title}</h2>
-          <p className="max-w-xl text-slate-400">{t.skillsSection.subtitle}</p>
-        </div>
+        <SectionHeader labelIcon="terminal" label={t.skillsSection.label} title={t.skillsSection.title} subtitle={t.skillsSection.subtitle} />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {t.skillGroups.map((group, index) => (
+          {t.skillsSection.groups.map((group, index) => (
             <motion.div key={group.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} transition={{ duration: 0.5, delay: index * 0.04 }} whileHover={{ y: -6 }} className="group rounded-[2rem] border border-white/10 bg-white/[0.06] p-6 backdrop-blur-xl transition hover:bg-white/[0.09]">
               <div className="mb-5 flex items-center gap-3">
-                <div className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-fuchsia-400/15 via-cyan-300/15 to-amber-300/15 text-white"><FloatingIcon name={group.icon} className="h-5 w-5" delay={index * 0.1} /></div>
+                <div className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-fuchsia-400/15 via-cyan-300/15 to-amber-300/15 text-white">
+                  <FloatingIcon name={group.icon} className="h-5 w-5" delay={index * 0.1} />
+                </div>
                 <h3 className="text-lg font-black">{group.title}</h3>
               </div>
               <div className="flex flex-wrap gap-2">{group.skills.map((skill) => <Pill key={skill}>{skill}</Pill>)}</div>
@@ -1056,14 +1075,9 @@ function App() {
       </section>
 
       <section id="experiencia" className="relative mx-auto max-w-7xl px-5 py-16 lg:px-8">
-        <SectionLabel icon="shield">{t.experienceSection.label}</SectionLabel>
-        <div className="mb-10 flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
-          <h2 className="max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">{t.experienceSection.title}</h2>
-          <p className="max-w-xl text-slate-400">{t.experienceSection.subtitle}</p>
-        </div>
-
+        <SectionHeader labelIcon="shield" label={t.experienceSection.label} title={t.experienceSection.title} subtitle={t.experienceSection.subtitle} />
         <div className="grid gap-6">
-          {t.experiences.map((experience, index) => (
+          {t.experienceSection.items.map((experience, index) => (
             <motion.article key={experience.company} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} transition={{ duration: 0.5, delay: index * 0.06 }} whileHover={{ y: -4 }} className="overflow-hidden rounded-[2.3rem] border border-white/10 bg-white/[0.06] backdrop-blur-xl">
               <div className="grid gap-0 lg:grid-cols-[.36fr_.64fr]">
                 <div className="bg-[linear-gradient(135deg,rgba(217,70,239,.12),rgba(34,211,238,.12),rgba(251,191,36,.08))] p-7 lg:p-8">
@@ -1075,12 +1089,9 @@ function App() {
                   <p className="mt-2 font-semibold text-cyan-100">{experience.role}</p>
                   <Pill className="mt-4 border-amber-300/20 bg-amber-300/10 text-amber-100">{experience.accent}</Pill>
                 </div>
-
                 <div className="p-7 lg:p-8">
                   <p className="text-lg leading-8 text-slate-300">{experience.summary}</p>
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    {experience.achievements.map((item) => <Pill key={item}>{item}</Pill>)}
-                  </div>
+                  <div className="mt-6 flex flex-wrap gap-2">{experience.achievements.map((item) => <Pill key={item}>{item}</Pill>)}</div>
                 </div>
               </div>
             </motion.article>
@@ -1089,16 +1100,14 @@ function App() {
       </section>
 
       <section id="educacion" className="relative mx-auto max-w-7xl px-5 py-16 lg:px-8">
-        <SectionLabel icon="graduation">{t.educationSection.label}</SectionLabel>
-        <div className="mb-10 flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
-          <h2 className="max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">{t.educationSection.title}</h2>
-          <p className="max-w-xl text-slate-400">{t.educationSection.subtitle}</p>
-        </div>
+        <SectionHeader labelIcon="graduation" label={t.educationSection.label} title={t.educationSection.title} subtitle={t.educationSection.subtitle} />
         <div className="grid gap-6">
-          {t.education.map((item, index) => (
+          {t.educationSection.items.map((item, index) => (
             <motion.article key={item.institution} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} transition={{ duration: 0.5, delay: index * 0.06 }} className="grid gap-5 rounded-[2rem] border border-white/10 bg-white/[0.06] p-6 backdrop-blur-xl lg:grid-cols-[.36fr_.64fr]">
               <div>
-                <div className="mb-4 grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-fuchsia-400/20 via-cyan-300/20 to-amber-300/20 text-white"><FloatingIcon name="graduation" className="h-7 w-7" delay={index * 0.2} /></div>
+                <div className="mb-4 grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-fuchsia-400/20 via-cyan-300/20 to-amber-300/20 text-white">
+                  <FloatingIcon name="graduation" className="h-7 w-7" delay={index * 0.2} />
+                </div>
                 <p className="text-sm font-semibold uppercase tracking-[0.25em] text-fuchsia-100">{item.period}</p>
                 <h3 className="mt-3 text-2xl font-black">{item.institution}</h3>
               </div>
@@ -1113,13 +1122,9 @@ function App() {
       </section>
 
       <section id="proyectos" className="relative mx-auto max-w-7xl px-5 py-16 lg:px-8">
-        <SectionLabel icon="rocket">{t.projectsSection.label}</SectionLabel>
-        <div className="mb-10 flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
-          <h2 className="max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">{t.projectsSection.title}</h2>
-          <p className="max-w-xl text-slate-400">{t.projectsSection.subtitle}</p>
-        </div>
+        <SectionHeader labelIcon="rocket" label={t.projectsSection.label} title={t.projectsSection.title} subtitle={t.projectsSection.subtitle} />
         <div className="grid gap-6">
-          {t.projects.map((project, index) => (
+          {t.projectsSection.items.map((project, index) => (
             <motion.article key={project.name} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} transition={{ duration: 0.5, delay: index * 0.04 }} whileHover={{ y: -5 }} className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.06] backdrop-blur-xl transition hover:border-fuchsia-300/20 hover:bg-white/[0.08]">
               <div className="grid gap-0 lg:grid-cols-[.85fr_1.15fr]">
                 <div className="relative min-h-64 border-b border-white/10 bg-slate-950/35 p-7 lg:border-b-0 lg:border-r">
@@ -1130,14 +1135,22 @@ function App() {
                       <h3 className="mt-5 text-3xl font-black tracking-tight">{project.name}</h3>
                       <p className="mt-2 text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">{project.category}</p>
                     </div>
-                    <div className="mt-8 grid h-24 place-items-center rounded-3xl border border-white/10 bg-white/5"><FloatingIcon name="brain" className="h-12 w-12 text-cyan-200" delay={index * 0.12} /></div>
+                    <div className="mt-8 grid h-24 place-items-center rounded-3xl border border-white/10 bg-white/5">
+                      <FloatingIcon name="brain" className="h-12 w-12 text-cyan-200" delay={index * 0.12} />
+                    </div>
                   </div>
                 </div>
                 <div className="p-7">
                   <p className="text-lg leading-8 text-slate-300">{project.description}</p>
                   <div className="mt-6 grid gap-4 lg:grid-cols-2">
-                    <div className="rounded-2xl border border-white/10 bg-slate-950/25 p-4"><p className="text-sm font-bold text-fuchsia-100">{t.projectsSection.challenge}</p><p className="mt-2 text-sm leading-6 text-slate-300">{project.challenge}</p></div>
-                    <div className="rounded-2xl border border-white/10 bg-slate-950/25 p-4"><p className="text-sm font-bold text-cyan-100">{t.projectsSection.solution}</p><p className="mt-2 text-sm leading-6 text-slate-300">{project.solution}</p></div>
+                    <div className="rounded-2xl border border-white/10 bg-slate-950/25 p-4">
+                      <p className="text-sm font-bold text-fuchsia-100">{t.projectsSection.challenge}</p>
+                      <p className="mt-2 text-sm leading-6 text-slate-300">{project.challenge}</p>
+                    </div>
+                    <div className="rounded-2xl border border-white/10 bg-slate-950/25 p-4">
+                      <p className="text-sm font-bold text-cyan-100">{t.projectsSection.solution}</p>
+                      <p className="mt-2 text-sm leading-6 text-slate-300">{project.solution}</p>
+                    </div>
                   </div>
                   <div className="mt-6 grid gap-3 sm:grid-cols-2">{project.impact.map((item) => <div key={item} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-950/25 p-3 text-sm text-slate-200"><span className="h-2 w-2 rounded-full bg-cyan-300" />{item}</div>)}</div>
                   <div className="mt-6 flex flex-wrap gap-2">{project.stack.map((tech) => <Pill key={tech}>{tech}</Pill>)}</div>
@@ -1164,7 +1177,7 @@ function App() {
             <div className="border-t border-white/10 bg-slate-950/25 p-8 lg:border-l lg:border-t-0 lg:p-10">
               <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,.20),transparent_30%),radial-gradient(circle_at_80%_20%,rgba(217,70,239,.18),transparent_30%),linear-gradient(180deg,#141b34,#0c1020)]">
                 {t.researchSection.imageUrl ? (
-                  <img src={t.researchSection.imageUrl} alt="MindMate AmITIC 2025" className="h-full w-full object-cover" />
+                  <ZoomableImage imageUrl={t.researchSection.imageUrl} title={t.researchSection.title} alt="MindMate AmITIC 2025" onPreview={openImagePreview} />
                 ) : (
                   <div className="flex h-full flex-col items-center justify-center p-8 text-center">
                     <div className="mb-5 grid h-20 w-20 place-items-center rounded-3xl border border-white/10 bg-white/8 text-white"><FloatingIcon name="graduation" className="h-10 w-10" /></div>
@@ -1194,21 +1207,17 @@ function App() {
       </section>
 
       <section id="galeria" className="relative mx-auto max-w-7xl px-5 py-16 lg:px-8">
-        <SectionLabel icon="layers">{t.gallerySection.label}</SectionLabel>
-        <div className="mb-10 flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
-          <h2 className="max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">{t.gallerySection.title}</h2>
-          <p className="max-w-xl text-slate-400">{t.gallerySection.subtitle}</p>
-        </div>
+        <SectionHeader labelIcon="layers" label={t.gallerySection.label} title={t.gallerySection.title} subtitle={t.gallerySection.subtitle} />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {t.gallerySection.items.map((item, index) => (
             <motion.div key={item.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} transition={{ duration: 0.45, delay: index * 0.04 }} whileHover={{ y: -6 }} className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.06] backdrop-blur-xl">
               <div className="relative aspect-[16/10] border-b border-white/10 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,.20),transparent_30%),radial-gradient(circle_at_80%_20%,rgba(217,70,239,.18),transparent_30%),linear-gradient(180deg,#141b34,#0c1020)]">
                 {item.imageUrl ? (
-                  <img src={item.imageUrl} alt={item.title} className="h-full w-full object-cover" />
+                  <ZoomableImage imageUrl={item.imageUrl} title={item.title} alt={item.title} onPreview={openImagePreview} />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center"><div className="grid h-16 w-16 place-items-center rounded-3xl border border-white/10 bg-white/8 text-white shadow-xl"><FloatingIcon name="layers" className="h-8 w-8" delay={index * 0.1} /></div></div>
                 )}
-                <div className="absolute left-4 top-4"><Pill className="border-cyan-300/20 bg-cyan-300/10 text-cyan-100">{item.tag}</Pill></div>
+                <div className="pointer-events-none absolute left-4 top-4"><Pill className="border-cyan-300/20 bg-cyan-300/10 text-cyan-100">{item.tag}</Pill></div>
               </div>
               <div className="p-5"><h3 className="text-lg font-black">{item.title}</h3><p className="mt-2 text-sm leading-6 text-slate-400">{item.subtitle}</p></div>
             </motion.div>
@@ -1235,10 +1244,10 @@ function App() {
                 <div className="rounded-3xl border border-white/10 bg-white/5 p-5"><p className="text-sm text-slate-400">{t.ui.name}</p><p className="mt-1 font-bold">{profile.name}</p></div>
                 <div className="rounded-3xl border border-white/10 bg-white/5 p-5"><p className="text-sm text-slate-400">{t.ui.email}</p><p className="mt-1 font-bold">{profile.email}</p></div>
                 <div className="rounded-3xl border border-white/10 bg-white/5 p-5"><p className="text-sm text-slate-400">{t.ui.phone}</p><p className="mt-1 font-bold">{profile.phone}</p></div>
-                <div className="rounded-3xl border border-white/10 bg-white/5 p-5"><p className="text-sm text-slate-400">LinkedIn</p><a href={profile.linkedin} target="_blank" rel="noreferrer" className="mt-1 inline-flex items-center gap-2 font-bold text-cyan-200 hover:text-cyan-100"><FloatingIcon name="linkedin" className="h-4 w-4" />{t.ui.viewProfessionalProfile}</a></div>
+                <div className="rounded-3xl border border-white/10 bg-white/5 p-5"><p className="text-sm text-slate-400">{t.ui.linkedin}</p><a href={profile.linkedin} target="_blank" rel="noreferrer" className="mt-1 inline-flex items-center gap-2 font-bold text-cyan-200 hover:text-cyan-100"><FloatingIcon name="linkedin" className="h-4 w-4" />{t.ui.viewLinkedin}</a></div>
                 <div className="flex gap-3 pt-2">
                   <a href={profile.linkedin} target="_blank" rel="noreferrer" className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-white/5 text-slate-300 transition hover:bg-white/10 hover:text-white" aria-label="LinkedIn"><FloatingIcon name="linkedin" className="h-5 w-5" /></a>
-                  <button type="button" className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-white/5 text-slate-300 transition hover:bg-white/10 hover:text-white" aria-label={t.ui.githubPending}><FloatingIcon name="github" className="h-5 w-5" /></button>
+                  <a href={profile.github} target="_blank" rel="noreferrer" className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-white/5 text-slate-300 transition hover:bg-white/10 hover:text-white" aria-label="GitHub"><FloatingIcon name="github" className="h-5 w-5" /></a>
                   <button type="button" className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-white/5 text-slate-300 transition hover:bg-white/10 hover:text-white" aria-label={t.ui.demoPending}><FloatingIcon name="external" className="h-5 w-5" /></button>
                 </div>
               </div>
@@ -1246,6 +1255,8 @@ function App() {
           </div>
         </div>
       </section>
+
+      <ImagePreviewModal previewImage={previewImage} onClose={closeImagePreview} />
     </main>
   );
 }
