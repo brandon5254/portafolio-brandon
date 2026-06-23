@@ -11,7 +11,7 @@ const profile = {
   photoUrl: "/images/profile/imagen brandon.jpeg",
 };
 
-const cvUrl = "/cv/Brandon_Tobar_CV.pdf";
+const cvUrl = "/images/cv/Brandon_Tobar_CV.pdf";
 const whatsappUrl = "https://wa.me/573045874931";
 
 const galleryImageRoutes = {
