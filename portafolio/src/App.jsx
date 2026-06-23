@@ -19,6 +19,7 @@ const galleryImageRoutes = {
   aerolinea: "/images/projects/aerolinea panel.png",
   asistencia: "/images/projects/asistencia digital.png",
   amitic: "/images/research/certificado_AmITIC_2025__ (1).jpg",
+  
 };
 
 const content = {
@@ -382,7 +383,7 @@ const content = {
         { title: "InterMuniConnect", subtitle: "Vista de aplicación de movilidad colaborativa y experiencia responsive.", tag: "Mobile / Mobility", imageUrl: galleryImageRoutes.intermuniconnect },
         { title: "Cali Conecta IA", subtitle: "Panel de anomalías, consultas inteligentes y recomendaciones operativas.", tag: "AI Ops", imageUrl: galleryImageRoutes.caliConecta },
         { title: "FacturaOps", subtitle: "Flujos de OCR, validación, trazabilidad y automatización documental.", tag: "Automation", imageUrl: galleryImageRoutes.facturaops },
-        { title: "E-commerce WordPress + WooCommerce", subtitle: "Tienda web comercial con catálogo de productos, checkout, integración de pagos Wompi, SEO y seguridad web.", tag: "WordPress / E-commerce", imageUrl: "/images/projects/wordpress-woocommerce.png" },
+        { title: "E-commerce WordPress + WooCommerce", subtitle: "Tienda web comercial con catálogo de productos, checkout, integración de pagos Wompi, SEO y seguridad web.", tag: "WordPress / E-commerce", imageUrl: "/images/projects/pagina web mi canalete.jpeg" },
         { title: "Sistema de aerolínea", subtitle: "Panel administrativo, API REST y arquitectura empresarial.", tag: "Enterprise", imageUrl: galleryImageRoutes.aerolinea },
         { title: "Asistencia biométrica", subtitle: "Registro, reportes y automatización de control interno.", tag: "Desktop", imageUrl: galleryImageRoutes.asistencia },
       ],
@@ -755,7 +756,7 @@ const content = {
         { title: "InterMuniConnect", subtitle: "Collaborative mobility application and responsive experience.", tag: "Mobile / Mobility", imageUrl: galleryImageRoutes.intermuniconnect },
         { title: "Cali Conecta AI", subtitle: "Anomaly panel, intelligent queries and operational recommendations.", tag: "AI Ops", imageUrl: galleryImageRoutes.caliConecta },
         { title: "FacturaOps", subtitle: "OCR, validation, traceability and document automation flows.", tag: "Automation", imageUrl: galleryImageRoutes.facturaops },
-        { title: "WordPress + WooCommerce E-commerce", subtitle: "Commercial online store with product catalog, checkout, Wompi payment integration, SEO and web security.", tag: "WordPress / E-commerce", imageUrl: "/images/projects/wordpress-woocommerce.png" },
+        { title: "WordPress + WooCommerce E-commerce", subtitle: "Commercial online store with product catalog, checkout, Wompi payment integration, SEO and web security.", tag: "WordPress / E-commerce", imageUrl: "/images/projects/pagina web mi canalete.jpeg" },
         { title: "Airline system", subtitle: "Administrative panel, REST API and enterprise architecture.", tag: "Enterprise", imageUrl: galleryImageRoutes.aerolinea },
         { title: "Biometric attendance", subtitle: "Registration, reports and internal control automation.", tag: "Desktop", imageUrl: galleryImageRoutes.asistencia },
       ],
