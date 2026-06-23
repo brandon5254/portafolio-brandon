@@ -11,6 +11,9 @@ const profile = {
   photoUrl: "/images/profile/imagen brandon.jpeg",
 };
 
+const cvUrl = "/cv/Brandon_Tobar_CV.pdf";
+const whatsappUrl = "https://wa.me/573045874931";
+
 const galleryImageRoutes = {
   mindmate: "/images/projects/mindmate module.jpeg",
   intermuniconnect: "/images/projects/intermuniconect.png",
@@ -18,6 +21,7 @@ const galleryImageRoutes = {
   facturaops: "/images/projects/facturaops.jpeg",
   aerolinea: "/images/projects/aerolinea panel.png",
   asistencia: "/images/projects/asistencia digital.png",
+  canalete: "/images/projects/pagina web mi canalete.jpeg",
   amitic: "/images/research/certificado_AmITIC_2025__ (1).jpg",
   
 };
@@ -29,6 +33,13 @@ const content = {
       contact: "Contactar",
       sendEmail: "Enviar correo",
       call: "Llamar",
+      whatsapp: "WhatsApp",
+      downloadCV: "Descargar CV",
+      liveDemo: "Demo",
+      sourceCode: "GitHub",
+      technicalDetails: "Detalles técnicos",
+      projectStatus: "Estado",
+      technicalContribution: "Aporte técnico",
       viewLinkedin: "Ver LinkedIn",
       viewGithub: "Ver GitHub",
       viewProjects: "Ver proyectos destacados",
@@ -51,10 +62,11 @@ const content = {
       ["server", "Backend sólido", "APIs, datos y despliegue"],
       ["linkedin", "Marca profesional", "Listo para reclutadores"],
     ],
+    heroStack: [".NET", "Node.js", "React", "TypeScript", "SQL", "JWT", "APIs REST"],
     profile: {
-      role: "Ingeniero de Sistemas",
+      role: "Backend & Full Stack Developer Junior",
       headline:
-        "Desarrollo software inteligente, automatización de procesos e inteligencia artificial aplicada para crear soluciones digitales con impacto real.",
+        "Desarrollo APIs REST, aplicaciones web y sistemas conectados a bases de datos con React, TypeScript, Node.js, C#/.NET, Python y SQL. Me enfoco en construir soluciones funcionales, bien estructuradas y listas para integrarse con productos reales.",
     },
     navItems: [
       { label: "Inicio", href: "#inicio" },
@@ -111,9 +123,9 @@ const content = {
       label: "Perfil profesional",
       title: "Un perfil técnico con criterio, impacto y visión de crecimiento.",
       p1:
-        "Ingeniero de Sistemas con enfoque en desarrollo de software, inteligencia artificial y automatización de procesos. Experiencia en diseño e implementación de soluciones tecnológicas utilizando Angular, React, Python, FastAPI, Java Spring Boot, servicios en la nube y herramientas de automatización.",
+        "Soy desarrollador Backend / Full Stack Junior con enfoque en la construcción de APIs REST, aplicaciones web y sistemas conectados a bases de datos relacionales. Trabajo con tecnologías como React, TypeScript, Node.js, C#/.NET, Python, MySQL, PostgreSQL, SQL Server y herramientas de documentación como Swagger/Postman.",
       p2:
-        "Durante mi práctica profesional en la DIAN, desarrollé soluciones basadas en Power Platform integrando IA y automatización para optimizar procesos institucionales. También he participado en proyectos de machine learning, sistemas inteligentes, salud digital, plataformas operativas y aplicaciones empresariales enfocadas en resolver problemas reales.",
+        "Me interesa crear soluciones funcionales, bien organizadas y fáciles de mantener. Actualmente fortalezco mis habilidades en arquitectura backend, autenticación, documentación de APIs, diseño de bases de datos, desarrollo frontend moderno, automatización e inteligencia artificial aplicada a procesos reales.",
       tags: ["Backend", "Arquitectura", "IA aplicada", "Automatización", "Cloud", "Ciencia de datos", "Clean Code", "Despliegue"],
     },
     skillsSection: {
@@ -161,6 +173,11 @@ const content = {
           title: "Arquitecturas de software",
           icon: "shield",
           skills: ["Clean Code", "Monolítica", "Microservicios", "Arquitectura Limpia", "Modular", "Hexagonal"],
+        },
+        {
+          title: "WordPress, E-commerce & SEO",
+          icon: "globe",
+          skills: ["WordPress", "WooCommerce", "Wompi", "CMS", "SEO técnico", "Seguridad web", "Plugins", "Checkout"],
         },
       ],
     },
@@ -373,6 +390,32 @@ const content = {
       title: "Criterio técnico + autonomía + resultados",
       items: ["Pensamiento analítico", "Resolución de problemas", "Aprendizaje autónomo", "Trabajo en equipo", "Adaptabilidad tecnológica", "Orientación a resultados"],
     },
+    whySection: {
+      label: "Por qué trabajar conmigo",
+      title: "Un perfil Junior+ con mentalidad práctica y orientación a producto.",
+      items: [
+        {
+          icon: "rocket",
+          title: "Enfoque práctico",
+          text: "Construyo proyectos funcionales, no solo interfaces estáticas. Me interesa que cada solución tenga lógica real, datos, interacción y estructura técnica.",
+        },
+        {
+          icon: "server",
+          title: "Mentalidad backend",
+          text: "Me enfoco en APIs REST, autenticación, bases de datos, separación de responsabilidades, documentación técnica y mantenimiento.",
+        },
+        {
+          icon: "brain",
+          title: "Aprendizaje constante",
+          text: "Sigo fortaleciendo arquitectura, buenas prácticas, testing, despliegue, seguridad, automatización e inteligencia artificial aplicada.",
+        },
+        {
+          icon: "mail",
+          title: "Comunicación clara",
+          text: "Documento mis proyectos y busco explicar decisiones técnicas de forma simple, honesta y entendible para equipos técnicos y no técnicos.",
+        },
+      ],
+    },
     gallerySection: {
       label: "Galería",
       title: "Espacios visuales para evidenciar tu trabajo.",
@@ -383,7 +426,7 @@ const content = {
         { title: "InterMuniConnect", subtitle: "Vista de aplicación de movilidad colaborativa y experiencia responsive.", tag: "Mobile / Mobility", imageUrl: galleryImageRoutes.intermuniconnect },
         { title: "Cali Conecta IA", subtitle: "Panel de anomalías, consultas inteligentes y recomendaciones operativas.", tag: "AI Ops", imageUrl: galleryImageRoutes.caliConecta },
         { title: "FacturaOps", subtitle: "Flujos de OCR, validación, trazabilidad y automatización documental.", tag: "Automation", imageUrl: galleryImageRoutes.facturaops },
-        { title: "E-commerce WordPress + WooCommerce", subtitle: "Tienda web comercial con catálogo de productos, checkout, integración de pagos Wompi, SEO y seguridad web.", tag: "WordPress / E-commerce", imageUrl: "/images/projects/pagina web mi canalete.jpeg" },
+        { title: "E-commerce WordPress + WooCommerce", subtitle: "Tienda web comercial con catálogo de productos, checkout, integración de pagos Wompi, SEO y seguridad web.", tag: "WordPress / E-commerce", imageUrl: galleryImageRoutes.canalete },
         { title: "Sistema de aerolínea", subtitle: "Panel administrativo, API REST y arquitectura empresarial.", tag: "Enterprise", imageUrl: galleryImageRoutes.aerolinea },
         { title: "Asistencia biométrica", subtitle: "Registro, reportes y automatización de control interno.", tag: "Desktop", imageUrl: galleryImageRoutes.asistencia },
       ],
@@ -402,6 +445,13 @@ const content = {
       contact: "Contact",
       sendEmail: "Send email",
       call: "Call",
+      whatsapp: "WhatsApp",
+      downloadCV: "Download CV",
+      liveDemo: "Live demo",
+      sourceCode: "GitHub",
+      technicalDetails: "Technical details",
+      projectStatus: "Status",
+      technicalContribution: "Technical contribution",
       viewLinkedin: "View LinkedIn",
       viewGithub: "View GitHub",
       viewProjects: "View featured projects",
@@ -424,10 +474,11 @@ const content = {
       ["server", "Solid backend", "APIs, data and deployment"],
       ["linkedin", "Professional brand", "Recruiter-ready"],
     ],
+    heroStack: [".NET", "Node.js", "React", "TypeScript", "SQL", "JWT", "REST APIs"],
     profile: {
-      role: "Systems Engineer",
+      role: "Junior Backend & Full Stack Developer",
       headline:
-        "I build intelligent software, process automation and applied AI solutions to create digital products with real-world impact.",
+        "I build REST APIs, web applications and database-connected systems using React, TypeScript, Node.js, C#/.NET, Python and SQL. I focus on creating functional, well-structured solutions ready to integrate with real products.",
     },
     navItems: [
       { label: "Home", href: "#inicio" },
@@ -484,9 +535,9 @@ const content = {
       label: "Professional profile",
       title: "A technical profile with judgment, impact and growth vision.",
       p1:
-        "Systems Engineer focused on software development, artificial intelligence and process automation. Experience designing and implementing technology solutions using Angular, React, Python, FastAPI, Java Spring Boot, cloud services and automation tools.",
+        "I am a Junior Backend / Full Stack Developer focused on building REST APIs, web applications and systems connected to relational databases. I work with technologies such as React, TypeScript, Node.js, C#/.NET, Python, MySQL, PostgreSQL, SQL Server and API documentation tools such as Swagger/Postman.",
       p2:
-        "During my professional internship at DIAN, I developed Power Platform solutions integrating AI and automation to optimize institutional processes. I have also worked on machine learning, intelligent systems, digital health, operational platforms and enterprise applications focused on solving real problems.",
+        "I am interested in creating functional, well-organized and maintainable solutions. I keep strengthening my skills in backend architecture, authentication, API documentation, database design, modern frontend development, automation and AI applied to real processes.",
       tags: ["Backend", "Architecture", "Applied AI", "Automation", "Cloud", "Data science", "Clean Code", "Deployment"],
     },
     skillsSection: {
@@ -534,6 +585,11 @@ const content = {
           title: "Software architectures",
           icon: "shield",
           skills: ["Clean Code", "Monolithic", "Microservices", "Clean Architecture", "Modular", "Hexagonal"],
+        },
+        {
+          title: "WordPress, E-commerce & SEO",
+          icon: "globe",
+          skills: ["WordPress", "WooCommerce", "Wompi", "CMS", "Technical SEO", "Web security", "Plugins", "Checkout"],
         },
       ],
     },
@@ -746,6 +802,32 @@ const content = {
       title: "Technical judgment + autonomy + results",
       items: ["Analytical thinking", "Problem solving", "Self-learning", "Teamwork", "Technological adaptability", "Results orientation"],
     },
+    whySection: {
+      label: "Why work with me",
+      title: "A Junior+ profile with practical mindset and product orientation.",
+      items: [
+        {
+          icon: "rocket",
+          title: "Practical approach",
+          text: "I build functional projects, not only static designs. I care about real logic, data, interaction and technical structure.",
+        },
+        {
+          icon: "server",
+          title: "Backend mindset",
+          text: "I focus on REST APIs, authentication, databases, separation of concerns, technical documentation and maintainability.",
+        },
+        {
+          icon: "brain",
+          title: "Continuous learning",
+          text: "I keep improving architecture, good practices, testing, deployment, security, automation and applied AI.",
+        },
+        {
+          icon: "mail",
+          title: "Clear communication",
+          text: "I document my projects and explain technical decisions in a simple, honest and understandable way.",
+        },
+      ],
+    },
     gallerySection: {
       label: "Gallery",
       title: "Visual spaces to showcase my work.",
@@ -756,7 +838,7 @@ const content = {
         { title: "InterMuniConnect", subtitle: "Collaborative mobility application and responsive experience.", tag: "Mobile / Mobility", imageUrl: galleryImageRoutes.intermuniconnect },
         { title: "Cali Conecta AI", subtitle: "Anomaly panel, intelligent queries and operational recommendations.", tag: "AI Ops", imageUrl: galleryImageRoutes.caliConecta },
         { title: "FacturaOps", subtitle: "OCR, validation, traceability and document automation flows.", tag: "Automation", imageUrl: galleryImageRoutes.facturaops },
-        { title: "WordPress + WooCommerce E-commerce", subtitle: "Commercial online store with product catalog, checkout, Wompi payment integration, SEO and web security.", tag: "WordPress / E-commerce", imageUrl: "/images/projects/pagina web mi canalete.jpeg" },
+        { title: "WordPress + WooCommerce E-commerce", subtitle: "Commercial online store with product catalog, checkout, Wompi payment integration, SEO and web security.", tag: "WordPress / E-commerce", imageUrl: galleryImageRoutes.canalete },
         { title: "Airline system", subtitle: "Administrative panel, REST API and enterprise architecture.", tag: "Enterprise", imageUrl: galleryImageRoutes.aerolinea },
         { title: "Biometric attendance", subtitle: "Registration, reports and internal control automation.", tag: "Desktop", imageUrl: galleryImageRoutes.asistencia },
       ],
@@ -991,6 +1073,138 @@ function SectionHeader({ labelIcon, label, title, subtitle }) {
   );
 }
 
+function getSkillEvidence(title, lang) {
+  const isEs = lang === "es";
+  const normalizedTitle = title.toLowerCase();
+
+  if (normalizedTitle.includes("backend")) {
+    return isEs
+      ? "Desarrollo de APIs REST, servicios modulares, autenticación, documentación técnica y conexión con bases de datos."
+      : "REST API development, modular services, authentication, technical documentation and database integration.";
+  }
+
+  if (normalizedTitle.includes("frontend") || normalizedTitle.includes("mobile")) {
+    return isEs
+      ? "Construcción de interfaces responsive, consumo de APIs, formularios, componentes reutilizables y experiencia de usuario."
+      : "Responsive interfaces, API consumption, forms, reusable components and user experience.";
+  }
+
+  if (normalizedTitle.includes("base") || normalizedTitle.includes("database")) {
+    return isEs
+      ? "Modelado relacional, consultas SQL, persistencia de datos e integración con backends reales."
+      : "Relational modeling, SQL queries, data persistence and integration with real backend systems.";
+  }
+
+  if (normalizedTitle.includes("cloud") || normalizedTitle.includes("devops")) {
+    return isEs
+      ? "Despliegue, configuración de servicios, control de versiones y publicación de aplicaciones web."
+      : "Deployment, service configuration, version control and web application publishing.";
+  }
+
+  if (normalizedTitle.includes("ia") || normalizedTitle.includes("ai")) {
+    return isEs
+      ? "Uso de modelos, automatización, análisis de datos, agentes inteligentes y apoyo a procesos operativos."
+      : "Use of models, automation, data analysis, intelligent agents and operational process support.";
+  }
+
+  if (normalizedTitle.includes("herramientas") || normalizedTitle.includes("tools")) {
+    return isEs
+      ? "Flujo profesional con Git, GitHub, Postman, editores IDE y validación de servicios."
+      : "Professional workflow with Git, GitHub, Postman, IDEs and service validation.";
+  }
+
+  if (normalizedTitle.includes("arquitectura") || normalizedTitle.includes("architecture")) {
+    return isEs
+      ? "Organización de código, separación de responsabilidades, módulos, capas y buenas prácticas de mantenibilidad."
+      : "Code organization, separation of concerns, modules, layers and maintainability practices.";
+  }
+
+  if (normalizedTitle.includes("wordpress")) {
+    return isEs
+      ? "Implementación de sitios administrables, catálogo de productos, checkout, pagos, SEO técnico y seguridad web."
+      : "Manageable websites, product catalog, checkout, payments, technical SEO and web security.";
+  }
+
+  return isEs
+    ? "Conocimientos aplicados en proyectos funcionales y flujos de desarrollo reales."
+    : "Knowledge applied in functional projects and real development workflows.";
+}
+
+function getProjectImage(projectName) {
+  const name = projectName.toLowerCase();
+
+  if (name.includes("mindmate")) return galleryImageRoutes.mindmate;
+  if (name.includes("cali conecta")) return galleryImageRoutes.caliConecta;
+  if (name.includes("facturaops") || name.includes("factura autopilot")) return galleryImageRoutes.facturaops;
+  if (name.includes("wordpress") || name.includes("woocommerce") || name.includes("e-commerce")) return galleryImageRoutes.canalete;
+  if (name.includes("aerolínea") || name.includes("airline")) return galleryImageRoutes.aerolinea;
+  if (name.includes("carpooling") || name.includes("intermuniconnect")) return galleryImageRoutes.intermuniconnect;
+  if (name.includes("asistencia") || name.includes("attendance") || name.includes("biometric")) return galleryImageRoutes.asistencia;
+
+  return "";
+}
+
+function ProjectImagePreview({ project, onPreview }) {
+  const imageUrl = project.imageUrl || getProjectImage(project.name);
+
+  if (!imageUrl) {
+    return (
+      <div className="mt-8 grid min-h-40 place-items-center rounded-3xl border border-dashed border-white/15 bg-white/5 p-5 text-center">
+        <div>
+          <div className="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-2xl border border-white/10 bg-white/8 text-cyan-100">
+            <FloatingIcon name="layers" className="h-7 w-7" />
+          </div>
+          <p className="text-sm font-bold text-white">Screenshot pendiente</p>
+          <p className="mt-2 text-xs leading-5 text-slate-400">Espacio listo para agregar una captura real del proyecto.</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="mt-8 overflow-hidden rounded-3xl border border-white/10 bg-slate-950/35 shadow-xl shadow-black/20">
+      <div className="aspect-[16/10]">
+        <ZoomableImage imageUrl={imageUrl} title={project.name} alt={project.name} onPreview={onPreview} />
+      </div>
+    </div>
+  );
+}
+
+function ProjectLinks({ project, t }) {
+  return (
+    <div className="mt-6 flex flex-wrap gap-3">
+      {project.demoUrl ? (
+        <a href={project.demoUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-2xl border border-cyan-300/20 bg-cyan-300/10 px-4 py-3 text-sm font-bold text-cyan-100 transition hover:bg-cyan-300/15">
+          <Icon name="external" className="h-4 w-4" />
+          {t.ui.liveDemo}
+        </a>
+      ) : null}
+      {project.codeUrl ? (
+        <a href={project.codeUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/8 px-4 py-3 text-sm font-bold text-white transition hover:bg-white/12">
+          <Icon name="github" className="h-4 w-4" />
+          {t.ui.sourceCode}
+        </a>
+      ) : null}
+      <details className="group w-full sm:w-auto">
+        <summary className="inline-flex cursor-pointer list-none items-center gap-2 rounded-2xl border border-fuchsia-300/20 bg-fuchsia-300/10 px-4 py-3 text-sm font-bold text-fuchsia-100 transition hover:bg-fuchsia-300/15">
+          <Icon name="chevron" className="h-4 w-4 transition group-open:rotate-90" />
+          {t.ui.technicalDetails}
+        </summary>
+        <div className="mt-4 rounded-2xl border border-white/10 bg-slate-950/35 p-4 text-sm leading-6 text-slate-300">
+          <p>
+            <span className="font-bold text-cyan-100">{t.ui.projectStatus}: </span>
+            {project.status || (t.ui.languageButton === "English" ? "Proyecto desarrollado y documentado como caso técnico de portafolio." : "Developed project documented as a technical portfolio case study.")}
+          </p>
+          <p className="mt-3">
+            <span className="font-bold text-fuchsia-100">{t.ui.technicalContribution}: </span>
+            {project.contribution || project.solution}
+          </p>
+        </div>
+      </details>
+    </div>
+  );
+}
+
 function App() {
   const [openMenu, setOpenMenu] = useState(false);
   const [previewImage, setPreviewImage] = useState(null);
@@ -1085,9 +1299,20 @@ function App() {
             <span className="inline-flex rounded-full border border-fuchsia-300/20 bg-fuchsia-300/10 px-4 py-2 text-sm font-semibold text-fuchsia-100">{t.ui.focusBadge}</span>
           </div>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300">{t.profile.headline}</p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-6 flex flex-wrap gap-2">
+            {t.heroStack.map((tech) => (
+              <Pill key={tech} className="border-cyan-300/20 bg-cyan-300/10 text-cyan-100">{tech}</Pill>
+            ))}
+          </div>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a href="#proyectos" className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-fuchsia-400 via-cyan-300 to-amber-300 px-6 py-4 font-bold text-slate-950 shadow-xl shadow-fuchsia-950/30 transition hover:scale-[1.02]">
               {t.ui.viewProjects} <Icon name="arrow" className="h-5 w-5 transition group-hover:translate-x-1" />
+            </a>
+            <a href={cvUrl} download className="inline-flex items-center justify-center gap-2 rounded-2xl border border-amber-300/20 bg-amber-300/10 px-6 py-4 font-bold text-amber-100 backdrop-blur transition hover:bg-amber-300/15">
+              <Icon name="external" className="h-5 w-5" /> {t.ui.downloadCV}
+            </a>
+            <a href="#contacto" className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/8 px-6 py-4 font-bold text-white backdrop-blur transition hover:bg-white/12">
+              <FloatingIcon name="mail" className="h-5 w-5" /> {t.ui.contact}
             </a>
             <a href={profile.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/8 px-6 py-4 font-bold text-white backdrop-blur transition hover:bg-white/12">
               <FloatingIcon name="linkedin" className="h-5 w-5" /> {t.ui.viewLinkedin}
@@ -1133,6 +1358,7 @@ function App() {
                 </div>
                 <h3 className="text-lg font-black">{group.title}</h3>
               </div>
+              <p className="mb-4 text-sm leading-6 text-slate-400">{getSkillEvidence(group.title, lang)}</p>
               <div className="flex flex-wrap gap-2">{group.skills.map((skill) => <Pill key={skill}>{skill}</Pill>)}</div>
             </motion.div>
           ))}
@@ -1200,9 +1426,7 @@ function App() {
                       <h3 className="mt-5 text-3xl font-black tracking-tight">{project.name}</h3>
                       <p className="mt-2 text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">{project.category}</p>
                     </div>
-                    <div className="mt-8 grid h-24 place-items-center rounded-3xl border border-white/10 bg-white/5">
-                      <FloatingIcon name="brain" className="h-12 w-12 text-cyan-200" delay={index * 0.12} />
-                    </div>
+                    <ProjectImagePreview project={project} onPreview={openImagePreview} />
                   </div>
                 </div>
                 <div className="p-7">
@@ -1219,6 +1443,7 @@ function App() {
                   </div>
                   <div className="mt-6 grid gap-3 sm:grid-cols-2">{project.impact.map((item) => <div key={item} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-950/25 p-3 text-sm text-slate-200"><span className="h-2 w-2 rounded-full bg-cyan-300" />{item}</div>)}</div>
                   <div className="mt-6 flex flex-wrap gap-2">{project.stack.map((tech) => <Pill key={tech}>{tech}</Pill>)}</div>
+                  <ProjectLinks project={project} t={t} />
                 </div>
               </div>
             </motion.article>
@@ -1271,6 +1496,21 @@ function App() {
         </div>
       </section>
 
+      <section className="relative mx-auto max-w-7xl px-5 py-16 lg:px-8">
+        <SectionHeader labelIcon="rocket" label={t.whySection.label} title={t.whySection.title} />
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {t.whySection.items.map((item, index) => (
+            <motion.div key={item.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} transition={{ duration: 0.45, delay: index * 0.05 }} whileHover={{ y: -6 }} className="rounded-[2rem] border border-white/10 bg-white/[0.06] p-6 backdrop-blur-xl">
+              <div className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-fuchsia-400/20 via-cyan-300/20 to-amber-300/20 text-white">
+                <FloatingIcon name={item.icon} className="h-6 w-6" delay={index * 0.1} />
+              </div>
+              <h3 className="text-xl font-black">{item.title}</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-400">{item.text}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       <section id="galeria" className="relative mx-auto max-w-7xl px-5 py-16 lg:px-8">
         <SectionHeader labelIcon="layers" label={t.gallerySection.label} title={t.gallerySection.title} subtitle={t.gallerySection.subtitle} />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -1298,9 +1538,11 @@ function App() {
               <h2 className="text-4xl font-black tracking-tight sm:text-5xl">{t.contactSection.title}</h2>
               <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">{t.contactSection.text}</p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a href={`mailto:${profile.email}`} className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-4 font-bold text-slate-950 transition hover:bg-amber-100"><FloatingIcon name="mail" className="h-5 w-5" />{t.ui.sendEmail}</a>
-                <a href={profile.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/8 px-6 py-4 font-bold text-white transition hover:bg-white/12"><FloatingIcon name="linkedin" className="h-5 w-5" />{t.ui.viewLinkedin}</a>
-                <a href={`tel:${cleanPhone}`} className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/8 px-6 py-4 font-bold text-white transition hover:bg-white/12"><FloatingIcon name="phone" className="h-5 w-5" />{t.ui.call}</a>
+                <a href={profile.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-4 font-bold text-slate-950 transition hover:bg-amber-100"><FloatingIcon name="linkedin" className="h-5 w-5" />{t.ui.viewLinkedin}</a>
+                <a href={profile.github} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/8 px-6 py-4 font-bold text-white transition hover:bg-white/12"><FloatingIcon name="github" className="h-5 w-5" />{t.ui.viewGithub}</a>
+                <a href={`mailto:${profile.email}`} className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/8 px-6 py-4 font-bold text-white transition hover:bg-white/12"><FloatingIcon name="mail" className="h-5 w-5" />{t.ui.sendEmail}</a>
+                <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-2xl border border-cyan-300/20 bg-cyan-300/10 px-6 py-4 font-bold text-cyan-100 transition hover:bg-cyan-300/15"><FloatingIcon name="phone" className="h-5 w-5" />{t.ui.whatsapp}</a>
+                <a href={cvUrl} download className="inline-flex items-center justify-center gap-2 rounded-2xl border border-amber-300/20 bg-amber-300/10 px-6 py-4 font-bold text-amber-100 transition hover:bg-amber-300/15"><Icon name="external" className="h-5 w-5" />{t.ui.downloadCV}</a>
               </div>
             </div>
             <div className="border-t border-white/10 bg-slate-950/30 p-8 lg:border-l lg:border-t-0 lg:p-10">
@@ -1320,6 +1562,10 @@ function App() {
           </div>
         </div>
       </section>
+
+      <footer className="relative border-t border-white/10 px-5 py-8 text-center text-sm text-slate-500">
+        <p>© {new Date().getFullYear()} Brandon Eduardo Tobar Sánchez · Backend & Full Stack Developer Junior</p>
+      </footer>
 
       <ImagePreviewModal previewImage={previewImage} onClose={closeImagePreview} />
     </main>
