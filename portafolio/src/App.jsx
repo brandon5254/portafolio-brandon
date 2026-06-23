@@ -271,6 +271,37 @@ const content = {
           stack: ["Python", "FastAPI", "SQLite", "SQLAlchemy", "PyPDF2", "OCR", "Selenium"],
         },
         {
+          name: "E-commerce WordPress + WooCommerce con Wompi",
+          category: "WordPress · WooCommerce · Pagos · SEO · Seguridad",
+          badge: "Perfil intermedio WordPress",
+          description:
+            "Implementé una tienda web profesional en WordPress con WooCommerce, orientada a la venta de productos en línea y operación comercial real. El proyecto incluyó configuración del CMS, personalización de páginas, estructura de catálogo, gestión de productos, carrito, checkout, integración de pasarela de pagos Wompi, ajustes de SEO técnico y aplicación de medidas de seguridad para mejorar la confiabilidad, visibilidad y estabilidad del sitio.",
+          challenge:
+            "El reto principal fue construir una solución e-commerce funcional, segura y administrable, que permitiera mostrar productos, recibir pagos en línea, mejorar el posicionamiento en buscadores y ofrecer una experiencia clara para usuarios finales sin depender de un desarrollo completamente desde cero.",
+          solution:
+            "Se configuró WordPress como gestor de contenidos, WooCommerce como motor de comercio electrónico y Wompi como pasarela de pagos. Se trabajó en la organización del catálogo, configuración de productos, métodos de pago, estructura de páginas, navegación, formularios, optimización SEO básica y técnica, configuración de plugins esenciales, ajustes de seguridad, respaldo operativo y mejoras de rendimiento para entregar una tienda lista para uso comercial.",
+          impact: [
+            "Tienda web administrable en WordPress",
+            "Catálogo de productos con WooCommerce",
+            "Checkout e integración de pagos con Wompi",
+            "Optimización SEO básica y técnica",
+            "Configuración de seguridad web",
+            "Mejor experiencia de navegación y compra",
+          ],
+          stack: [
+            "WordPress",
+            "WooCommerce",
+            "Wompi",
+            "CMS",
+            "E-commerce",
+            "SEO técnico",
+            "Seguridad web",
+            "Plugins",
+            "Checkout",
+            "Responsive design",
+          ],
+        },
+        {
           name: "Sistema de gestión para aerolínea",
           category: "API REST + Frontend empresarial",
           badge: "Arquitectura empresarial",
@@ -351,6 +382,7 @@ const content = {
         { title: "InterMuniConnect", subtitle: "Vista de aplicación de movilidad colaborativa y experiencia responsive.", tag: "Mobile / Mobility", imageUrl: galleryImageRoutes.intermuniconnect },
         { title: "Cali Conecta IA", subtitle: "Panel de anomalías, consultas inteligentes y recomendaciones operativas.", tag: "AI Ops", imageUrl: galleryImageRoutes.caliConecta },
         { title: "FacturaOps", subtitle: "Flujos de OCR, validación, trazabilidad y automatización documental.", tag: "Automation", imageUrl: galleryImageRoutes.facturaops },
+        { title: "E-commerce WordPress + WooCommerce", subtitle: "Tienda web comercial con catálogo de productos, checkout, integración de pagos Wompi, SEO y seguridad web.", tag: "WordPress / E-commerce", imageUrl: "/images/projects/wordpress-woocommerce.png" },
         { title: "Sistema de aerolínea", subtitle: "Panel administrativo, API REST y arquitectura empresarial.", tag: "Enterprise", imageUrl: galleryImageRoutes.aerolinea },
         { title: "Asistencia biométrica", subtitle: "Registro, reportes y automatización de control interno.", tag: "Desktop", imageUrl: galleryImageRoutes.asistencia },
       ],
@@ -612,6 +644,37 @@ const content = {
           stack: ["Python", "FastAPI", "SQLite", "SQLAlchemy", "PyPDF2", "OCR", "Selenium"],
         },
         {
+          name: "WordPress + WooCommerce E-commerce with Wompi",
+          category: "WordPress · WooCommerce · Payments · SEO · Security",
+          badge: "Intermediate WordPress profile",
+          description:
+            "I implemented a professional online store using WordPress and WooCommerce, focused on selling products online and supporting real commercial operations. The project included CMS configuration, page customization, catalog structure, product management, cart, checkout, Wompi payment gateway integration, technical SEO adjustments and security measures to improve the website’s reliability, visibility and stability.",
+          challenge:
+            "The main challenge was to build a functional, secure and manageable e-commerce solution that could display products, receive online payments, improve search engine visibility and provide a clear experience for end users without requiring a fully custom development from scratch.",
+          solution:
+            "WordPress was configured as the content management system, WooCommerce as the e-commerce engine and Wompi as the payment gateway. I worked on catalog organization, product setup, payment methods, page structure, navigation, forms, basic and technical SEO optimization, essential plugin configuration, security adjustments, operational backup practices and performance improvements to deliver a store ready for commercial use.",
+          impact: [
+            "Manageable WordPress online store",
+            "WooCommerce product catalog",
+            "Checkout and Wompi payment integration",
+            "Basic and technical SEO optimization",
+            "Web security configuration",
+            "Improved navigation and purchase experience",
+          ],
+          stack: [
+            "WordPress",
+            "WooCommerce",
+            "Wompi",
+            "CMS",
+            "E-commerce",
+            "Technical SEO",
+            "Web security",
+            "Plugins",
+            "Checkout",
+            "Responsive design",
+          ],
+        },
+        {
           name: "Airline management system",
           category: "REST API + Enterprise frontend",
           badge: "Enterprise architecture",
@@ -692,6 +755,7 @@ const content = {
         { title: "InterMuniConnect", subtitle: "Collaborative mobility application and responsive experience.", tag: "Mobile / Mobility", imageUrl: galleryImageRoutes.intermuniconnect },
         { title: "Cali Conecta AI", subtitle: "Anomaly panel, intelligent queries and operational recommendations.", tag: "AI Ops", imageUrl: galleryImageRoutes.caliConecta },
         { title: "FacturaOps", subtitle: "OCR, validation, traceability and document automation flows.", tag: "Automation", imageUrl: galleryImageRoutes.facturaops },
+        { title: "WordPress + WooCommerce E-commerce", subtitle: "Commercial online store with product catalog, checkout, Wompi payment integration, SEO and web security.", tag: "WordPress / E-commerce", imageUrl: "/images/projects/wordpress-woocommerce.png" },
         { title: "Airline system", subtitle: "Administrative panel, REST API and enterprise architecture.", tag: "Enterprise", imageUrl: galleryImageRoutes.aerolinea },
         { title: "Biometric attendance", subtitle: "Registration, reports and internal control automation.", tag: "Desktop", imageUrl: galleryImageRoutes.asistencia },
       ],
